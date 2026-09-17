@@ -1,0 +1,81 @@
+.notif-page__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+.notif-page__filters { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.notif-page__unread {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cms-text-muted);
+}
+
+.notif-page__empty {
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--cms-text-faint);
+  font-size: 14px;
+}
+
+.notif-page__list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--cms-border); border-radius: var(--radius); overflow: hidden; }
+.notif-page__list li { border-bottom: 1px solid var(--cms-border); }
+.notif-page__list li:last-child { border-bottom: none; }
+
+.notif-page__row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--cms-surface);
+  border: none;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.notif-page__row:hover { background: var(--cms-surface-muted); }
+.notif-page__row--unread { background: var(--cms-primary-soft); }
+
+.notif-page__sev {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: var(--cms-text-faint);
+}
+.notif-page__sev--info { background: var(--info); }
+.notif-page__sev--warning { background: var(--warning); }
+.notif-page__sev--critical { background: var(--danger); }
+
+.notif-page__main { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+.notif-page__row-title { font-size: 13px; font-weight: 600; color: var(--cms-text); }
+.notif-page__row-body { font-size: 12px; color: var(--cms-text-muted); }
+
+.notif-page__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  flex: 0 0 auto;
+  text-align: right;
+}
+.notif-page__cat {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--cms-text-faint);
+}
+.notif-page__time { font-size: 11px; color: var(--cms-text-faint); white-space: nowrap; }
+
+.notif-page__more { display: flex; justify-content: center; margin-top: var(--space-4); }
+
+@media (max-width: 620px) {
+  .notif-page__meta { flex-direction: row; align-items: center; gap: 8px; }
+}

@@ -1,0 +1,118 @@
+/* ============================================================ *
+ *  CMS THEME TOKENS — LIGHT + PURPLE (product decision)
+ *
+ *  The admin shell is LIGHT by default. This is a deliberate
+ *  product choice, NOT an OS preference: `prefers-color-scheme`
+ *  must never flip the CMS to dark. A future dark theme, if it
+ *  ships, is opt-in only via  <html data-theme="dark">  (the
+ *  dormant block below), never automatic.
+ *
+ *  Canonical tokens are the `--cms-*` / `--sidebar-*` / semantic
+ *  `*-soft` sets. Every legacy token name (`--bg`, `--surface`,
+ *  `--accent`, `--good-fg`, …) is kept as an ALIAS so screens
+ *  that have not been redesigned yet keep working unchanged.
+ *
+ *  This file is global — loaded once from main.jsx before any
+ *  component stylesheet. All other CSS lives beside its
+ *  component (Sidebar.css, MetricCard.css, …).
+ * ============================================================ */
+:root {
+  color-scheme: light;
+
+  /* --- canonical: workspace ------------------------------- */
+  --cms-bg: #f6f7f9;
+  --cms-surface: #ffffff;
+  --cms-surface-muted: #f8f9fb;
+  --cms-border: #e7e9ef;
+  --cms-border-strong: #d5d9e2;
+  --cms-text: #1f2430;
+  --cms-text-muted: #5b6472;
+  --cms-text-faint: #8a929e;
+
+  /* --- canonical: primary accent (purple) ---------------- */
+  --cms-primary: #6d28d9;
+  --cms-primary-hover: #5b21b6;
+  --cms-primary-soft: #f2ecfd;
+  --cms-primary-contrast: #ffffff;
+
+  /* --- canonical: sidebar (purple gradient) -------------- */
+  --sidebar-gradient-start: #5a23a6;
+  --sidebar-gradient-end: #3a1479;
+  --sidebar-bg: linear-gradient(185deg, var(--sidebar-gradient-start) 0%, #491c93 50%, var(--sidebar-gradient-end) 100%);
+  --sidebar-text: #f4f0fd;
+  --sidebar-text-muted: rgba(255, 255, 255, 0.74);
+  --sidebar-heading: rgba(255, 255, 255, 0.56);
+  --sidebar-icon: rgba(255, 255, 255, 0.85);
+  --sidebar-active: rgba(255, 255, 255, 0.18);
+  --sidebar-active-text: #ffffff;
+  --sidebar-hover: rgba(255, 255, 255, 0.1);
+  --sidebar-divider: rgba(255, 255, 255, 0.14);
+
+  /* --- canonical: semantic ------------------------------- */
+  --success: #1c7a43;   --success-soft: #e7f5ec;
+  --warning: #9a6111;   --warning-soft: #fbeed6;
+  --danger:  #b3271b;   --danger-soft:  #fdeae8;
+  --info:    #2563c9;   --info-soft:    #e8effc;
+
+  /* --- shape / depth ------------------------------------- */
+  --shadow: 0 1px 2px rgba(28, 30, 45, 0.05), 0 6px 16px rgba(28, 30, 45, 0.06);
+  --shadow-sm: 0 1px 2px rgba(28, 30, 45, 0.05);
+  --radius: 10px;
+  --radius-sm: 8px;
+  --radius-lg: 14px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --sidebar-w: 240px;
+  --topbar-h: 56px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* --- legacy aliases (compat layer, do not remove) ------ */
+  --bg: var(--cms-bg);
+  --surface: var(--cms-surface);
+  --surface-2: var(--cms-surface-muted);
+  --border: var(--cms-border);
+  --border-strong: var(--cms-border-strong);
+  --text: var(--cms-text);
+  --text-muted: var(--cms-text-muted);
+  --text-faint: var(--cms-text-faint);
+  --accent: var(--cms-primary);
+  --accent-hover: var(--cms-primary-hover);
+  --accent-contrast: var(--cms-primary-contrast);
+  --accent-soft: var(--cms-primary-soft);
+  --good-bg: var(--success-soft);
+  --good-fg: var(--success);
+  --warn-bg: var(--warning-soft);
+  --warn-fg: var(--warning);
+  --bad-bg: var(--danger-soft);
+  --bad-fg: var(--danger);
+  --info-bg: var(--info-soft);
+  --info-fg: var(--info);
+}
+
+/* Dormant. Only applies when a future build explicitly opts in with
+ * <html data-theme="dark">. `prefers-color-scheme` is intentionally
+ * NOT used so the light product theme is never auto-overridden. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --cms-bg: #12151b;
+  --cms-surface: #1b1f27;
+  --cms-surface-muted: #20242d;
+  --cms-border: #2c313b;
+  --cms-border-strong: #3a404c;
+  --cms-text: #e6e9ee;
+  --cms-text-muted: #a4acb9;
+  --cms-text-faint: #7b838f;
+  --cms-primary: #a684f0;
+  --cms-primary-hover: #b89bf5;
+  --cms-primary-soft: #241d3a;
+  --success: #74d99a; --success-soft: #14321f;
+  --warning: #e7b464; --warning-soft: #3a2c12;
+  --danger: #f0968b;  --danger-soft: #3a1c19;
+  --info: #8ab4ec;    --info-soft: #182a41;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+}

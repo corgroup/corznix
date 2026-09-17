@@ -1,0 +1,122 @@
+/* Light top header: global search + help + staff account menu.
+ * The old "Admin Console" page title is gone — the topbar is now a
+ * navigation/utility bar matching the approved dashboard reference. */
+.topbar {
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  background: var(--cms-surface);
+  border-bottom: 1px solid var(--cms-border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.topbar__menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* A full 40px tap target on phones; the three bars stay centred inside it. */
+  width: var(--control-h);
+  height: var(--control-h);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--control-radius);
+  padding: 0;
+  flex: 0 0 auto;
+}
+.topbar__menu-btn span { width: 18px; height: 2px; background: var(--cms-text); border-radius: 2px; }
+.topbar__menu-btn:hover { background: var(--cms-surface-muted); }
+
+.topbar__right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.topbar__icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--cms-border);
+  background: var(--cms-surface);
+  color: var(--cms-text-muted);
+}
+.topbar__icon-btn:hover { background: var(--cms-surface-muted); color: var(--cms-text); text-decoration: none; }
+.topbar__icon-btn svg { width: 18px; height: 18px; }
+
+.topbar__account { position: relative; }
+.topbar__account-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 3px 8px 3px 3px;
+  cursor: pointer;
+  color: inherit;
+}
+.topbar__account-btn:hover { background: var(--cms-surface-muted); }
+.topbar__avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--cms-primary);
+  color: var(--cms-primary-contrast);
+  font-size: 12px;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+.topbar__account-meta { display: flex; flex-direction: column; line-height: 1.25; text-align: left; }
+.topbar__account-name { font-size: 13px; font-weight: 600; color: var(--cms-text); }
+.topbar__account-role { font-size: 11px; color: var(--cms-text-faint); }
+.topbar__chevron { width: 14px; height: 14px; color: var(--cms-text-faint); flex: 0 0 auto; }
+
+.topbar__dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 248px;
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 4px;
+}
+.topbar__dropdown-head { padding: 10px 10px 12px; border-bottom: 1px solid var(--cms-border); margin-bottom: 4px; }
+.topbar__dropdown-name { margin: 0; font-weight: 600; font-size: 13px; color: var(--cms-text); }
+.topbar__dropdown-email { margin: 2px 0 0; font-size: 12px; color: var(--cms-text-muted); word-break: break-all; }
+.topbar__dropdown-role { margin: 5px 0 0; font-size: 10px; color: var(--cms-text-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+.topbar__dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 10px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--cms-text);
+}
+.topbar__dropdown-item:hover { background: var(--cms-surface-muted); text-decoration: none; }
+.topbar__dropdown-item:disabled { color: var(--cms-text-faint); cursor: default; }
+
+@media (max-width: 900px) {
+  .topbar { gap: 10px; padding: 0 14px; }
+  .topbar__menu-btn { display: flex; }
+  .topbar__account-meta { display: none; }
+}

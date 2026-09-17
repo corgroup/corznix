@@ -1,0 +1,94 @@
+/* Global search — real fan-out over the existing admin list APIs. */
+.global-search {
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 560px;
+  min-width: 0;
+}
+.global-search--placeholder { visibility: hidden; }
+
+.global-search__field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 10px 0 12px;
+  border: 1px solid var(--cms-border-strong);
+  border-radius: 999px;
+  background: var(--cms-surface-muted);
+}
+.global-search__field:focus-within {
+  background: var(--cms-surface);
+  border-color: var(--cms-primary);
+  box-shadow: 0 0 0 3px var(--cms-primary-soft);
+}
+.global-search__icon { width: 16px; height: 16px; color: var(--cms-text-faint); flex: 0 0 auto; }
+.global-search__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  color: var(--cms-text);
+  outline: none;
+}
+.global-search__input::placeholder { color: var(--cms-text-faint); }
+.global-search__kbd {
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 11px;
+  color: var(--cms-text-faint);
+  border: 1px solid var(--cms-border);
+  border-radius: 5px;
+  padding: 1px 5px;
+  background: var(--cms-surface);
+}
+
+.global-search__panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 6px;
+  max-height: 420px;
+  overflow-y: auto;
+  z-index: 30;
+}
+.global-search__empty { margin: 0; padding: 12px; font-size: 13px; color: var(--cms-text-muted); }
+.global-search__group { padding: 4px 0; }
+.global-search__group + .global-search__group { border-top: 1px solid var(--cms-border); }
+.global-search__group-label {
+  margin: 0;
+  padding: 6px 10px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cms-text-faint);
+}
+.global-search__result {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 100%;
+  text-align: left;
+  padding: 8px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+.global-search__result.is-active { background: var(--cms-primary-soft); }
+.global-search__result-title { font-size: 13px; font-weight: 500; color: var(--cms-text); }
+.global-search__result-sub { font-size: 11px; color: var(--cms-text-faint); }
+
+@media (max-width: 900px) {
+  .global-search { max-width: none; }
+  .global-search__kbd { display: none; }
+}

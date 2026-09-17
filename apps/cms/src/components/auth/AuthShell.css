@@ -1,0 +1,171 @@
+/* Shared visual system for every pre-shell auth screen (AuthShell.jsx +
+   AuthField.jsx). Redesigned 2026-09-05 to match the COR-GROUP reference
+   mock — replaces the old .login__* rules in styles/legacy.css, which no
+   longer style anything (kept there only as dead compat until every call
+   site is confirmed migrated). */
+
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  background: var(--cms-bg);
+}
+
+/* Soft violet blobs in the corners — decorative only, never under content.
+   `fixed` (not `absolute`) so a card taller than the viewport still scrolls
+   the page normally instead of the parent needing `overflow: hidden` (which
+   would clip the card itself on a short window). */
+.auth-shell__decor {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(480px 480px at 8% 8%, rgba(109, 40, 217, 0.10), transparent 70%),
+    radial-gradient(560px 560px at 100% 90%, rgba(90, 35, 166, 0.08), transparent 70%),
+    radial-gradient(360px 360px at 92% 4%, rgba(37, 99, 201, 0.06), transparent 70%);
+}
+
+.auth-shell__card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 380px;
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 2px rgba(28, 30, 45, 0.04), 0 24px 48px -12px rgba(43, 21, 92, 0.16);
+  padding: 32px;
+}
+.auth-shell__card--wide { max-width: 420px; }
+
+.auth-shell__brand { display: flex; align-items: center; gap: 14px; }
+.auth-shell__mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: var(--cms-surface);
+  box-shadow: 0 0 0 1px var(--cms-border);
+}
+.auth-shell__title { margin: 0; font-weight: 800; font-size: 17px; letter-spacing: 0.02em; color: var(--cms-text); }
+.auth-shell__eyebrow { margin: 2px 0 0; color: var(--cms-text-faint); font-size: 13px; }
+
+.auth-shell__divider { height: 1px; background: var(--cms-border); margin: 20px 0; }
+
+.auth-shell__heading-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 22px; }
+.auth-shell__icon-chip {
+  flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  background: var(--cms-primary-soft);
+  color: var(--cms-primary);
+}
+.auth-shell__icon-chip .auth-icon { width: 22px; height: 22px; }
+.auth-shell__heading { margin: 0 0 4px; font-size: 21px; font-weight: 800; color: var(--cms-text); }
+.auth-shell__hint { margin: 0; color: var(--cms-text-muted); font-size: 13.5px; line-height: 1.5; }
+
+.auth-shell__form { display: flex; flex-direction: column; gap: 14px; }
+.auth-shell__footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--cms-primary);
+  font: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.auth-shell__footer:hover { color: var(--cms-primary-hover); text-decoration: underline; }
+.auth-shell__footer .auth-icon { width: 15px; height: 15px; }
+
+/* ---------- fields (AuthField.jsx) ---------- */
+.auth-field { display: flex; flex-direction: column; gap: 6px; }
+.auth-field__label { font-size: 13px; font-weight: 600; color: var(--cms-text); }
+.auth-field__control { position: relative; display: flex; align-items: center; }
+.auth-field__control .auth-icon {
+  position: absolute;
+  left: 12px;
+  width: 17px;
+  height: 17px;
+  color: var(--cms-text-faint);
+  pointer-events: none;
+}
+.auth-field__control input {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px 0 38px;
+  border: 1px solid var(--cms-border-strong);
+  border-radius: var(--radius);
+  background: var(--cms-surface);
+  color: var(--cms-text);
+  font-size: 14px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.auth-field__control input::placeholder { color: var(--cms-text-faint); }
+.auth-field__control input:focus {
+  outline: none;
+  border-color: var(--cms-primary);
+  box-shadow: 0 0 0 3px var(--cms-primary-soft);
+}
+.auth-field__control input:disabled { background: var(--cms-surface-muted); opacity: 0.7; }
+.auth-field__toggle {
+  position: absolute;
+  right: 8px;
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  color: var(--cms-text-faint);
+  cursor: pointer;
+}
+.auth-field__toggle:hover { color: var(--cms-text-muted); background: var(--cms-surface-muted); }
+.auth-field__toggle .auth-icon { position: static; width: 17px; height: 17px; color: inherit; }
+
+/* ---------- primary button ---------- */
+.auth-btn {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14.5px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -8px rgba(76, 29, 149, 0.55);
+  transition: filter 120ms ease, transform 120ms ease;
+}
+.auth-btn:hover:not(:disabled) { filter: brightness(1.06); }
+.auth-btn:active:not(:disabled) { transform: translateY(1px); }
+.auth-btn:disabled { opacity: 0.55; cursor: default; box-shadow: none; }
+
+/* ---------- company picker (CompanySelection.css keeps the option-card
+   rules; these tweak the pill + selected feel to match the mock) -------- */
+.company-select__role {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--cms-primary-soft);
+  color: var(--cms-primary);
+  font-weight: 700;
+}
+.company-select__option:hover:not(:disabled),
+.company-select__option:focus-visible {
+  border-color: var(--cms-primary);
+  background: var(--cms-primary-soft);
+  box-shadow: 0 0 0 1px var(--cms-primary);
+}

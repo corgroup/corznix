@@ -1,0 +1,2462 @@
+{
+  "_comment": "Wave 8E Phase 5 DEFAULT content pages + FAQ. Transcribed verbatim from the copy supplied by the brand. Block shape = the draft input shape { type, data }. seed-content-pages.js backfills content_pages / content_page_blocks / content_faq_items and publishes v1 of each (idempotent, §115). FAQ Q&A copy was NOT supplied — faq.items is empty and FAQ_CONTENT_STATUS = MISSING until provided.",
+  "pages": [
+    {
+      "pageKey": "our_story",
+      "slug": "our-story",
+      "title": "Our Story",
+      "navLabel": "Our Story",
+      "seoTitle": "Our Story",
+      "seoDescription": "CORCOTTON is a contemporary apparel brand focused on clothing that feels considered, comfortable, and relevant beyond a single season.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Made for Everyday, Designed with Intention"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "CORCOTTON is a contemporary apparel brand focused on creating clothing that feels considered, comfortable, and relevant beyond a single season."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We believe good clothing begins with the details that matter in everyday life — fabric feel, fit, construction, proportion, comfort, and versatility. Our approach is to create pieces that are easy to wear, easy to combine, and designed to become a dependable part of your wardrobe."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Our Approach"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We focus on three simple principles:"
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Thoughtful Design"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Every product begins with its purpose. From silhouette and fit to colour and finishing, we aim to keep our designs refined, functional, and wearable."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Quality That Matters"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We pay attention to the materials, construction, stitching, finishing, and overall feel of each product. Our goal is not simply to make something that looks good when new, but to create clothing customers can enjoy wearing repeatedly."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "An Evolving Standard"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "CORCOTTON is continuously developing. As our collections, materials, processes, technology, and customer experience evolve, our objective remains the same: to improve the way our products are designed, presented, delivered, and supported."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "More Than the Product"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "The CORCOTTON experience extends beyond the garment itself. From discovering a product and choosing the right size to delivery, support, returns, exchanges, and after-purchase care, we aim to create a straightforward and dependable experience at every stage."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Thank you for being part of CORCOTTON."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "sustainability",
+      "slug": "sustainability",
+      "title": "Sustainability",
+      "navLabel": "Sustainability",
+      "seoTitle": "Sustainability",
+      "seoDescription": "A more considered approach: practical improvements that reduce unnecessary waste while improving product quality and longevity.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "A More Considered Approach"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "At CORCOTTON, we believe responsible progress comes from making thoughtful decisions across the life of a product."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Sustainability is an ongoing process rather than a single claim. We therefore focus on practical improvements that can help reduce unnecessary waste while improving product quality and longevity."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Designing for Longer Use"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "One of the most meaningful ways to reduce unnecessary consumption is to create products customers want to keep and wear."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We consider durability, versatility, construction, and care when developing our products so that garments can remain useful beyond a short trend cycle."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Considered Production"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We aim to make responsible decisions around product development and production while continuously reviewing opportunities to improve efficiency and reduce avoidable waste."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We do not believe sustainability should be communicated through unsupported claims. Where CORCOTTON makes a specific claim regarding a material, certification, sourcing standard, or environmental attribute, we aim to provide appropriate information supporting that claim."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Packaging"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We continually evaluate how our products are packed and delivered, with the objective of reducing unnecessary packaging while maintaining appropriate protection during storage and transportation."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Product Care"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "How a garment is used and cared for also affects its useful life."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Customers should always follow the care instructions provided with the individual product. Our [Care Guide](/pages/care-guide) also provides general guidance to help customers look after their clothing."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Continuing to Improve"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Our practices will continue to evolve as CORCOTTON grows."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We prefer measurable progress and transparent communication over broad environmental promises. When new verified initiatives, materials, standards, or certifications are introduced, we will update this page accordingly."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "craftsmanship",
+      "slug": "craftsmanship",
+      "title": "Craftsmanship",
+      "navLabel": "Craftsmanship",
+      "seoTitle": "Craftsmanship",
+      "seoDescription": "Craftsmanship at CORCOTTON means attention to fabric, construction, fit, stitching, finishing, and functionality.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Details Make the Difference"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "At CORCOTTON, craftsmanship means paying attention to the elements that determine how a garment looks, feels, fits, and performs in everyday wear."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "From the initial design to the finished product, we consider the relationship between fabric, construction, fit, stitching, finishing, and functionality."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Fabric & Feel"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "The character of a garment begins with its material."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Fabric influences comfort, drape, structure, appearance, breathability, and how a product behaves over time. Material selection is therefore considered as part of the intended design and use of each product."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Detailed fabric information, where applicable, is provided on individual product pages."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Fit & Proportion"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "A good garment is not defined only by its measurements."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Shoulder placement, body length, sleeve proportion, rise, width, and overall silhouette all contribute to the final fit."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Different CORCOTTON styles may therefore have different fit characteristics, including regular, relaxed, oversized, or other product-specific silhouettes."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Customers should refer to the [Size Guide](/pages/size-guide) provided for the individual product before ordering."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Construction & Finishing"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We consider details such as:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Seam construction",
+              "Stitching",
+              "Edge finishing",
+              "Closures and trims",
+              "Shape and proportion",
+              "Product consistency",
+              "Overall finishing"
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "The requirements may vary according to the type and intended design of each product."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Quality Is an Ongoing Standard"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Quality is not a single inspection or statement. It is a process of reviewing products, customer feedback, materials, construction, and production standards over time."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "As CORCOTTON develops, we will continue refining our standards with the objective of delivering products that meet the expectations associated with the brand."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "journal",
+      "slug": "journal",
+      "title": "Journal",
+      "navLabel": "Journal",
+      "seoTitle": "The CORCOTTON Journal",
+      "seoDescription": "Stories, ideas, product knowledge, and perspectives from CORCOTTON.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "The CORCOTTON Journal"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Stories, ideas, product knowledge, and perspectives from CORCOTTON."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "The Journal is where we explore the thinking that surrounds what we wear — from fit, fabric, styling, and garment care to product development and the evolution of the CORCOTTON brand."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Explore"
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Style"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Ideas and perspectives on creating versatile everyday wardrobes."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Fabric & Care"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Guidance for understanding materials and taking better care of your clothing."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Behind the Product"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "A closer look at design decisions, construction, fits, details, and product development."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "CORCOTTON Notes"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Updates, stories, launches, collaborations, and moments from the brand."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "New stories will be published periodically."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "careers",
+      "slug": "careers",
+      "title": "Careers",
+      "navLabel": "Careers",
+      "seoTitle": "Careers",
+      "seoDescription": "Build with CORCOTTON — the products, technology, operations, creative direction, and customer experience of a modern commerce company.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Build With CORCOTTON"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "CORCOTTON is building more than a clothing brand."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We are developing the products, technology, operations, creative direction, and customer experience required to build a modern commerce company."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We value people who care about their work, pay attention to details, question assumptions, and want to improve the way things are done."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Areas We May Work Across"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Opportunities may include areas such as:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Design and product development",
+              "Fashion and merchandising",
+              "E-commerce",
+              "Engineering and technology",
+              "Content and creative",
+              "Marketing",
+              "Customer experience",
+              "Operations and fulfilment",
+              "Finance and administration"
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Availability depends on our current hiring requirements."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Current Opportunities"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Active vacancies and their respective application instructions will be published on this page when positions are available."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Submitting an application does not guarantee an interview or employment. Recruitment decisions are based on the requirements of the relevant role."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Equal Opportunity"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "CORCOTTON aims to evaluate candidates based on their qualifications, experience, skills, suitability for the position, and applicable employment requirements."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "press",
+      "slug": "press",
+      "title": "Press",
+      "navLabel": "Press",
+      "seoTitle": "Press & Media",
+      "seoDescription": "A point of reference for journalists, editors, publications, creators, and media organisations seeking information about CORCOTTON.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "CORCOTTON Press & Media"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For journalists, editors, publications, creators, and media organisations seeking information about CORCOTTON, this page provides a point of reference for press-related communication."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Press Enquiries"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Media enquiries may include:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Brand information",
+              "Product information",
+              "Founder or company enquiries",
+              "Collection and launch information",
+              "Interview requests",
+              "Editorial features",
+              "Approved brand imagery and assets",
+              "Collaboration enquiries"
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For press-related requests, please contact us."
+          }
+        },
+        {
+          "type": "CONTACT",
+          "data": {
+            "rows": [
+              {
+                "label": "Email",
+                "value": "support@corcotton.in",
+                "href": "mailto:support@corcotton.in"
+              }
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Please include “Press Inquiry” in the subject line and provide your name, organisation/publication, request details, and relevant deadline."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Brand Assets"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Approved logos, product imagery, company information, or other media assets may be made available where appropriate."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "CORCOTTON trademarks, logos, imagery, and other brand materials may not be altered or used in a way that incorrectly represents an endorsement, partnership, or affiliation with CORCOTTON."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "size_guide",
+      "slug": "size-guide",
+      "title": "Size Guide",
+      "navLabel": "Size Guide",
+      "seoTitle": "Size Guide",
+      "seoDescription": "Find your CORCOTTON fit. How to measure, garment vs body measurements, and what to do when you are between sizes.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Find Your CORCOTTON Fit"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "The right size depends on both your body measurements and the intended fit of the product."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "CORCOTTON products may use different size guides according to the garment category, construction, and silhouette. A regular-fit T-shirt, oversized T-shirt, polo, trouser, or jogger may therefore have different measurements even when the same size label is used."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Always refer to the size guide shown on the individual product page before ordering."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "How to Measure"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For best results, use a flexible measuring tape and keep it level without pulling it excessively tight."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Chest"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Measure around the fullest part of your chest, keeping the measuring tape horizontal."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Shoulder"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Measure from one shoulder edge to the other across the upper back."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Body Length"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Measure from the highest shoulder point downward to the intended garment length."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Sleeve Length"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Measure from the shoulder point along the arm to the intended sleeve end."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Waist"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Measure around the natural waist without pulling the tape too tightly."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Hip"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Measure around the fullest part of the hips."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 3,
+            "text": "Inseam"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For bottoms, measure from the crotch seam down the inside of the leg."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Garment Measurements vs Body Measurements"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Some CORCOTTON size guides may display garment measurements rather than body measurements."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Garment measurements describe the actual finished product and may include additional room depending on whether the design is regular, relaxed, oversized, or another silhouette."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Check the description provided with the relevant size chart."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Between Two Sizes?"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "If your measurement falls between sizes, consider the intended fit of the garment."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For a closer fit, the smaller eligible size may be appropriate. For a more relaxed fit, the larger eligible size may be appropriate."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "This is general guidance only. Individual fit preferences and body proportions vary."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Need Help?"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "If you're unsure about sizing, contact CORCOTTON Support before ordering and share the product name and the size you are considering."
+          }
+        },
+        {
+          "type": "CONTACT",
+          "data": {
+            "rows": [
+              {
+                "label": "Email",
+                "value": "support@corcotton.in",
+                "href": "mailto:support@corcotton.in"
+              },
+              {
+                "label": "WhatsApp",
+                "value": "+91 9616884148",
+                "href": "tel:+919616884148"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "care_guide",
+      "slug": "care-guide",
+      "title": "Care Guide",
+      "navLabel": "Care Guide",
+      "seoTitle": "Care Guide",
+      "seoDescription": "General guidance for washing, drying, ironing, and storing your CORCOTTON garments. The product care label is always the primary instruction.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Care for Your CORCOTTON Garments"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Proper garment care can help preserve appearance, fit, colour, and useful life."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Because materials and constructions differ, the care label attached to the individual product is always the primary care instruction."
+          }
+        },
+        {
+          "type": "CALLOUT",
+          "data": {
+            "tone": "info",
+            "text": "The guidance below is general and should not override a product-specific care label."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Washing"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Check the garment care label before washing.",
+              "Separate light, dark, and strongly coloured garments where appropriate.",
+              "Turn printed, embroidered, or decorated garments inside out before washing where appropriate.",
+              "Use a mild detergent suitable for the fabric.",
+              "Avoid excessive detergent.",
+              "Wash at the temperature stated on the care label.",
+              "Avoid prolonged soaking unless the care instructions permit it."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Drying"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Follow tumble-dry instructions on the individual care label.",
+              "Where appropriate, air-drying can reduce unnecessary heat exposure.",
+              "Reshape garments gently before drying if required.",
+              "Avoid excessive direct sunlight for garments susceptible to colour fading.",
+              "Do not wring garments aggressively."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Ironing"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Follow the ironing-temperature symbol on the care label.",
+              "Iron garments inside out where appropriate.",
+              "Avoid placing a hot iron directly over prints, graphics, embroidery, badges, or heat-sensitive trims unless explicitly permitted."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Bleach & Chemicals"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Do not use bleach unless the individual care label specifically permits it. Avoid harsh chemicals or cleaning products not intended for the fabric."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Dark & Coloured Garments"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Some colour release may occur during initial washes depending on the material and dye process. Wash compatible colours together and follow the care label."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Printed & Graphic Products"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "To help protect printed areas:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Turn the garment inside out before washing where appropriate.",
+              "Avoid direct high heat over the print.",
+              "Avoid aggressive rubbing or scrubbing.",
+              "Follow the garment's specified drying instructions."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Knitwear & Shape-Sensitive Products"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Where applicable:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Avoid stretching while wet.",
+              "Reshape carefully after washing.",
+              "Dry according to the product-specific care instructions.",
+              "Store folded if hanging may distort the garment."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Stain Treatment"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Treat stains as soon as reasonably possible using a method suitable for the particular fabric. Test unfamiliar cleaning products on a discreet area first. Aggressive stain removal may permanently damage colour or fabric."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Storage"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Store garments clean and completely dry. Keep them in a dry environment away from excessive moisture, prolonged direct sunlight, and conditions that may cause mould, odour, or colour deterioration."
+          }
+        },
+        {
+          "type": "CALLOUT",
+          "data": {
+            "tone": "warn",
+            "text": "Damage caused by washing, drying, ironing, alteration, chemicals, or care methods that conflict with the product's care instructions may affect return or quality-claim eligibility. When in doubt, follow the product label or contact CORCOTTON Support."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "contact",
+      "slug": "contact",
+      "title": "Contact Us",
+      "navLabel": "Contact Us",
+      "seoTitle": "Contact Us",
+      "seoDescription": "Reach CORCOTTON customer support for questions about products, orders, delivery, returns, exchanges, refunds, payments, sizing, or your account.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "We're Here to Help"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For questions about products, orders, delivery, returns, exchanges, refunds, payments, sizing, or your CORCOTTON account, contact our customer-support team through the channels below."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Customer Support"
+          }
+        },
+        {
+          "type": "CONTACT",
+          "data": {
+            "rows": [
+              {
+                "label": "Email",
+                "value": "support@corcotton.in",
+                "href": "mailto:support@corcotton.in"
+              },
+              {
+                "label": "Phone",
+                "value": "+91 5493358300",
+                "href": "tel:+915493358300"
+              },
+              {
+                "label": "WhatsApp",
+                "value": "+91 9616884148",
+                "href": "tel:+919616884148"
+              }
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "When contacting us about an existing order, please include your order number so we can assist you more efficiently."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "We Can Help With"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Product information",
+              "Size and fit guidance",
+              "Order enquiries",
+              "Payment enquiries",
+              "Shipping and tracking",
+              "Delivery issues",
+              "Cancellation requests",
+              "Returns",
+              "Replacements",
+              "Exchanges",
+              "Refunds",
+              "Account assistance",
+              "General customer support"
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Business Information"
+          }
+        },
+        {
+          "type": "CONTACT",
+          "data": {
+            "rows": [
+              {
+                "label": "Legal Name",
+                "value": "CORCOTTON"
+              },
+              {
+                "label": "Trade Name",
+                "value": "M/S CORCOTTON"
+              },
+              {
+                "label": "GSTIN",
+                "value": "09AAVFC6069N1ZF"
+              },
+              {
+                "label": "Registered Address",
+                "value": "CORCOTTON, Ghazipur, Uttar Pradesh, India – 233222"
+              },
+              {
+                "label": "Website",
+                "value": "https://corcotton.in",
+                "href": "https://corcotton.in"
+              }
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Before Contacting Support"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For faster answers, you may also review:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "[Frequently Asked Questions](/pages/faqs)",
+              "Shipping & Delivery Policy",
+              "Returns & Exchanges Policy",
+              "[Size Guide](/pages/size-guide)",
+              "[Care Guide](/pages/care-guide)"
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For an order-specific request, your Order Details page may also show the actions currently available for that order."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "shipping",
+      "slug": "shipping",
+      "title": "Shipping & Delivery",
+      "navLabel": "Shipping & Delivery",
+      "seoTitle": "Shipping & Delivery",
+      "seoDescription": "Delivery charges, dispatch and delivery timelines, tracking, serviceability and what happens if a delivery fails.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Delivery charges"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Standard delivery is free on every order across India. No minimum order value applies."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Where express delivery is offered for your PIN code, it can be selected at checkout for an additional ₹100. The exact charge for your order is always shown on the checkout page before payment."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Dispatch and delivery time"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Orders are packed and handed to the courier from our Ghazipur, Uttar Pradesh facility. The estimated delivery date shown on the product page and at checkout is calculated from your PIN code using our courier partner live, so it reflects the actual route to your address rather than a generic promise."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Delivery timelines are estimates. Weather, regional restrictions, public holidays and courier delays can extend them."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Serviceability"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "You can check whether we deliver to your PIN code on any product page before ordering. If a PIN code is not serviceable, the order cannot be placed for that address."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Tracking your order"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "A confirmation is sent when your order is placed.",
+              "A tracking link is sent once the parcel is handed to the courier.",
+              "Live status is always available under Track Order and in My Account.",
+              "You are notified when the parcel is out for delivery and again once it is delivered."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Cash on Delivery"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Cash on Delivery is available on eligible orders and PIN codes. Availability is confirmed at checkout."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Failed or undelivered parcels"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Couriers normally re-attempt delivery. Please keep the phone number on your order reachable, as a courier who cannot reach you may return the parcel to us. If a parcel is returned undelivered, our team will contact you to arrange redelivery or a refund."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Incorrect address"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Please check your address and phone number before paying. Once a parcel has been handed to the courier the delivery address cannot be changed. Contact us immediately if you spot a mistake and we will try to intercept the shipment."
+          }
+        },
+        {
+          "type": "CALLOUT",
+          "data": {
+            "tone": "info",
+            "text": "Questions about a delivery: Contact us with your order number and we will check the status with the courier. Use the Contact Us page or your account Help & Support section."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "returns",
+      "slug": "returns",
+      "title": "Returns & Exchanges",
+      "navLabel": "Returns & Exchanges",
+      "seoTitle": "Returns & Exchanges",
+      "seoDescription": "Our 7-day return window, what can be returned, how to start a return or exchange, and how refunds are issued.",
+      "blocks": [
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "The 7-day window"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "You can request a return, replacement or exchange within 7 days of your order being delivered. The window is counted from the delivery date recorded by the courier, not the order date."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Once 7 days have passed since delivery, the order is no longer eligible and the option will not appear in your account."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "What can be returned"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "The item is unworn and unwashed.",
+              "Original tags and packaging are intact.",
+              "The item is free of stains, odours, perfume and damage caused after delivery.",
+              "The item is not marked non-returnable on its product page."
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Returned items are inspected on arrival. An item that fails inspection is sent back to you and no refund is issued."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "How to start a return"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Open My Account and go to Orders.",
+              "Select the delivered order and choose Return or Exchange.",
+              "Pick the items, quantity and a reason.",
+              "Submit the request — you will receive confirmation and pickup details."
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "A reverse pickup is arranged from the delivery address wherever the courier services it. Keep the item packed with its tags ready for the pickup agent."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Exchanges and replacements"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "A replacement sends the same item again, for example in a different size, and is available for 7 days after delivery. An exchange for a different style is also available within the same 7 days, subject to stock."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Refunds"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Approved refunds are issued to your original payment method after the returned item passes inspection. The amount reaches your bank or card according to your bank’s own processing time, typically within a few working days of us initiating it."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Delivery charges you paid, where applicable, are refunded only when the return is due to a damaged, defective or incorrect item."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Damaged, defective or wrong item"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Contact us within 7 days of delivery with your order number and photographs. These are collected and resolved at our cost."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Cancelling an order"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "An order can be cancelled from My Account until it has been handed to the courier. After that, please use the return process once it is delivered."
+          }
+        },
+        {
+          "type": "CALLOUT",
+          "data": {
+            "tone": "info",
+            "text": "Need help with a return: Contact us with your order number and we will guide you through it. Use the Contact Us page or your account Help & Support section."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "privacy-policy",
+      "slug": "privacy-policy",
+      "title": "Privacy Policy",
+      "navLabel": "Privacy Policy",
+      "seoTitle": "Privacy Policy",
+      "seoDescription": "What CORCOTTON collects when you shop with us, why we collect it, who we share it with, and how to reach us about your data.",
+      "blocks": [
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "This policy explains what CORCOTTON collects when you visit corcotton.in or place an order, why we collect it, who else sees it, and how to contact us about it. It applies to this website and to the messages we send you about your orders."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "It was last updated on 9 September 2026."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Who we are"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "CORCOTTON is the trade name of M/S CORCOTTON, registered in Uttar Pradesh, India. We are responsible for the information described here."
+          }
+        },
+        {
+          "type": "CONTACT",
+          "data": {
+            "rows": [
+              {
+                "label": "Legal Name",
+                "value": "CORCOTTON"
+              },
+              {
+                "label": "Trade Name",
+                "value": "M/S CORCOTTON"
+              },
+              {
+                "label": "GSTIN",
+                "value": "09AAVFC6069N1ZF"
+              },
+              {
+                "label": "Registered Address",
+                "value": "CORCOTTON, Ghazipur, Uttar Pradesh, India – 233222"
+              },
+              {
+                "label": "Email",
+                "value": "support@corcotton.in",
+                "href": "mailto:support@corcotton.in"
+              },
+              {
+                "label": "Phone",
+                "value": "+91 5493358300",
+                "href": "tel:+915493358300"
+              }
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "What we collect"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We only collect what an order or an account actually needs."
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Account details — your name, mobile number and email address, given when you sign in or complete your profile.",
+              "Delivery details — the addresses you save, including the recipient name, phone number and PIN code.",
+              "Order history — the items, sizes, quantities and amounts, and the status of each order, shipment, return and refund.",
+              "Payment status — which method you chose and whether a payment succeeded, failed or is still open. We do not receive or store your full card number, CVV, UPI PIN or netbanking credentials; those go directly to our payment partner.",
+              "Reviews — a rating and the words you write about an item you bought, published under your first name only.",
+              "Support conversations — the messages you send us and our replies.",
+              "Technical information — your IP address, browser and the pages you request, recorded in server logs so we can keep the site working and secure."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "What we do not collect"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "We do not store card numbers, CVV codes, UPI PINs or netbanking passwords at any point.",
+              "We do not buy contact lists or profile you from data bought elsewhere.",
+              "We do not sell your personal information to anyone."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Why we collect it"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "To take, pack, ship and deliver your order, and to handle a return, replacement, exchange or refund.",
+              "To sign you in and keep your account secure, which is why we send a one-time code to your phone or email.",
+              "To tell you what is happening with an order — confirmation, dispatch, delivery, return and refund updates.",
+              "To answer your questions and resolve complaints.",
+              "To meet tax and accounting obligations, including issuing a GST invoice.",
+              "To send you offers and news, only if you have asked us to."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Who we share it with"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We share the minimum each partner needs to do its job, and nothing more."
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Our courier receives the recipient name, delivery address, phone number and package details so it can deliver your order and arrange a return pickup.",
+              "Our payment gateway receives your name, contact details and the amount, and handles the payment itself. Card and UPI details are entered on their secure page, not ours.",
+              "Our messaging providers deliver the one-time codes and order updates sent to your phone and email.",
+              "Our media host stores the product images this site displays; it receives no customer data.",
+              "Government authorities, where the law requires it, or a court or regulator directs us."
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We do not share your information with anyone else for their own marketing."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Cookies and browser storage"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We use cookies to keep you signed in and to remember your cart between visits. Your browser also stores small preferences locally, such as a filter you last used. We do not use advertising trackers that follow you to other websites."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "You can clear or block this storage in your browser settings. If you block it, signing in and checking out will not work."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Marketing messages"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We only send offers and news to people who ask for them, by subscribing to our newsletter or opting in at checkout. Every marketing email carries an unsubscribe link, and you can also write to us to be removed. Messages about an order you have actually placed are not marketing and continue regardless."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "How long we keep it"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Order records, invoices and payment references are kept for as long as tax and accounting law requires. Account and address details are kept while your account is open. Support conversations are kept while a matter is open and for a reasonable period after it is closed. Server logs are kept for a short period for security and troubleshooting."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "How we protect it"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "The site and all data in transit are encrypted with HTTPS.",
+              "Passwords are stored only as irreversible hashes, and staff accounts sign in separately from customers.",
+              "Access to customer data is limited to staff who need it for their role, and privileged actions in our admin system are recorded in an audit trail."
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "No system can promise perfect security, but we treat any incident affecting your data seriously and will tell you, and the relevant authority, where we are required to."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Your choices"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "You can ask us to:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Show you the personal information we hold about you.",
+              "Correct anything that is wrong — you can also edit your profile and addresses yourself in My Account.",
+              "Delete your account and the personal information we are not legally required to keep.",
+              "Stop sending you marketing messages."
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Write to support@corcotton.in from the email address on your account, or call us, and we will respond as quickly as we reasonably can."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Children"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "This site is not intended for children under 18. We do not knowingly create accounts for them. If you believe a child has given us information, write to us and we will remove it."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Changes to this policy"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "If we change how we handle your information, we will update this page and the date at the top. Continuing to use the site after a change means you accept the updated policy."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Contact us"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For anything about this policy or your personal information, contact us at support@corcotton.in or +91 5493358300. You can also use the [Contact Us](/pages/contact) page."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "terms",
+      "slug": "terms",
+      "title": "Terms of Use",
+      "navLabel": "Terms of Use",
+      "seoTitle": "Terms of Use",
+      "seoDescription": "The terms on which you may use corcotton.in and buy from CORCOTTON — orders, pricing, payment, delivery, returns and the law that applies.",
+      "blocks": [
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "These terms govern your use of corcotton.in and any order you place on it. By browsing the site or buying from us, you accept them. They were last updated on 9 September 2026."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Who you are dealing with"
+          }
+        },
+        {
+          "type": "CONTACT",
+          "data": {
+            "rows": [
+              {
+                "label": "Legal Name",
+                "value": "CORCOTTON"
+              },
+              {
+                "label": "Trade Name",
+                "value": "M/S CORCOTTON"
+              },
+              {
+                "label": "GSTIN",
+                "value": "09AAVFC6069N1ZF"
+              },
+              {
+                "label": "Registered Address",
+                "value": "CORCOTTON, Ghazipur, Uttar Pradesh, India – 233222"
+              },
+              {
+                "label": "Email",
+                "value": "support@corcotton.in",
+                "href": "mailto:support@corcotton.in"
+              },
+              {
+                "label": "Phone",
+                "value": "+91 5493358300",
+                "href": "tel:+915493358300"
+              }
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Using the site"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "You must be 18 or older, or have the consent of a parent or guardian, to place an order.",
+              "You are responsible for keeping access to your account and your one-time codes to yourself.",
+              "Do not attempt to disrupt the site, extract data from it in bulk, or use it for anything unlawful.",
+              "Our name, designs, photographs, text and artwork belong to us. You may not copy or reuse them commercially without our written permission."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Products, descriptions and colour"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We describe our products as accurately as we can, including fabric, GSM, fit and measurements. Screens render colour differently, so a shade may vary slightly from what you see. Garment measurements are given on each product page and on our [Size Guide](/pages/size-guide); they are the measurements of the garment laid flat, not of the body."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Stock is finite. An item shown as available can sell out between the moment you add it to your cart and the moment you pay."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Prices"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "All prices are in Indian Rupees and include applicable taxes unless we say otherwise.",
+              "Different sizes of the same product may carry different prices; the price shown once you select a size is the price you pay.",
+              "We may change prices at any time. A change never affects an order that has already been confirmed."
+            ]
+          }
+        },
+        {
+          "type": "CALLOUT",
+          "data": {
+            "tone": "warning",
+            "text": "If a price is listed in obvious error, we may cancel the order and refund you in full rather than fulfil it at that price. We will tell you if this happens."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Placing an order"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Your order is an offer to buy. A contract is formed when we confirm the order. Until then we may decline it — for example if the item is out of stock, if the delivery address is outside our courier network, or if we cannot verify the payment."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Payment"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Online payments are handled by our payment gateway. Card, UPI and netbanking details are entered on their secure page; we never see or store them.",
+              "An order is treated as paid only once our systems confirm the payment with the gateway. Being redirected back to the site is not by itself confirmation.",
+              "Where cash on delivery is offered, it depends on the delivery PIN code, the order value and our courier supporting it at that address. It is not available on every order.",
+              "Where we offer partial cash on delivery, you pay an advance online and the balance to the delivery agent. The advance is stated at checkout before you pay."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Delivery"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We ship through our courier partner to PIN codes it services. Delivery estimates shown at checkout come from the courier and are estimates, not guarantees. Standard delivery is free. Express delivery, where available, is charged at the rate shown before you pay. Full details are on our [Shipping & Delivery](/pages/shipping) page."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Risk in the goods passes to you on delivery. If a package arrives damaged or tampered with, tell us within 48 hours with photographs so we can take it up with the courier."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Cancellations, returns and refunds"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "You may cancel an order before it is dispatched. After dispatch, use the return process instead. Returns, replacements and exchanges are available for 7 days from delivery, on the conditions set out on our [Returns & Exchanges](/pages/returns) page, and refunds follow our [Refund Policy](/pages/refund-policy)."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Reviews you write"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "You can review an item you have actually received. Reviews are moderated before they appear and are published under your first name. We may decline to publish a review that is abusive, off-topic, or not about the product; we do not edit the words of a review we do publish."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Our responsibility"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We stand behind what we sell. Nothing in these terms limits any right you have under Indian consumer law. Beyond those rights, our liability for any order is limited to the amount you paid for it, and we are not liable for indirect or consequential loss."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We try to keep the site available at all times but cannot promise it will never be interrupted for maintenance or for reasons outside our control."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Changes to these terms"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "We may update these terms. The version published here when you place an order is the version that applies to it."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Governing law"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "These terms are governed by the laws of India. Any dispute is subject to the exclusive jurisdiction of the courts at Ghazipur, Uttar Pradesh."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Contact us"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Write to support@corcotton.in or call +91 5493358300 with any question about these terms."
+          }
+        }
+      ]
+    },
+    {
+      "pageKey": "refund-policy",
+      "slug": "refund-policy",
+      "title": "Refund Policy",
+      "navLabel": "Refund Policy",
+      "seoTitle": "Refund & Cancellation Policy",
+      "seoDescription": "When CORCOTTON refunds you, how much, how the money is returned, and how long it takes — including cancellations and cash-on-delivery orders.",
+      "blocks": [
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "This page explains when we refund you, how much, where the money goes and how long it takes. It sits alongside our [Returns & Exchanges](/pages/returns) page, which covers how to send an item back."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "It was last updated on 9 September 2026."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Cancelling before dispatch"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "You can cancel an order any time before it is dispatched, from the order in My Account or by contacting us. A cancelled order that was paid online is refunded in full, including any delivery charge, and the stock goes straight back on sale."
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Once an order has been handed to the courier it can no longer be cancelled. Use the return process instead."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Refunds after a return"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "When a returned item reaches us it is inspected. If it passes, the refund is raised the same working day, and we tell you the moment it is on its way."
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "You are refunded the price you actually paid for the returned items.",
+              "If only part of an order comes back, only that part is refunded.",
+              "An item that fails inspection — worn, washed, without tags, or damaged after delivery — is returned to you and is not refunded."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Where the money goes"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "Paid online — back to the same card, UPI ID, bank account or wallet you paid from. We cannot send it anywhere else.",
+              "Paid cash on delivery — as store credit, or to a bank account you give us, because there is no online instrument to reverse.",
+              "Paid partly online — the online part goes back to the original method and the rest is handled as above."
+            ]
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Cash on delivery and the advance"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Where we ask for an advance to hold a cash-on-delivery order, the terms are stated at checkout before you pay. If that order is cancelled or returned:"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "What you paid to the delivery agent at your door is always refunded in full.",
+              "The advance paid online may be non-refundable, and the checkout page says so clearly before you pay it. Where it is, we keep it and refund the rest.",
+              "A fully prepaid order is never affected by this — it is refunded in full."
+            ]
+          }
+        },
+        {
+          "type": "CALLOUT",
+          "data": {
+            "tone": "info",
+            "text": "The advance covers the cost of shipping and handling an order that is then refused or sent back. We only keep it where the checkout told you in advance that we would."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Store credit"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Where a refund is issued as store credit, it appears in Store Credit in My Account, usually within a few minutes, and can be used on any future order. Store credit is not exchangeable for cash."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "How long it takes"
+          }
+        },
+        {
+          "type": "LIST",
+          "data": {
+            "items": [
+              "We raise the refund within one working day of approving it.",
+              "The money then takes as long as your bank or card issuer needs — usually 5 to 7 working days, sometimes longer for international cards.",
+              "Store credit is available immediately.",
+              "Bank transfers for cash-on-delivery orders are made within 7 working days of receiving your account details."
+            ]
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "The date the money reaches you is decided by your bank, not by us. If it has been longer than 10 working days since we told you a refund was issued, contact us with your order number and we will trace it."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Delivery charges"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "Standard delivery is free, so there is nothing to refund on it. Where you paid for express delivery, that charge is refunded if we cancel the order or the item arrives faulty, and is not refunded on a change-of-mind return."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Faulty or wrong items"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "If we send you the wrong item, or an item arrives damaged or defective, tell us within 48 hours of delivery with photographs. We collect it at our cost and either replace it or refund you in full, including any delivery charge — your choice."
+          }
+        },
+        {
+          "type": "HEADING",
+          "data": {
+            "level": 2,
+            "text": "Contact us"
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "data": {
+            "text": "For anything about a refund, write to support@corcotton.in or call +91 5493358300 with your order number."
+          }
+        }
+      ]
+    }
+  ],
+  "faq": {
+    "items": [
+      {
+        "itemKey": "faq_order_track",
+        "category": "Orders",
+        "question": "How do I track my order?",
+        "answer": [
+          "Open Orders in My Account to see the current status of every order you have placed, and the courier tracking link once a shipment is on its way.",
+          "You can also use the Track Your Order page with your order number, which looks like COR-20260828-XXXXXXXXXXXX and appears on your confirmation email."
+        ]
+      },
+      {
+        "itemKey": "faq_order_change",
+        "category": "Orders",
+        "question": "Can I change or cancel my order after placing it?",
+        "answer": [
+          "You can cancel an order any time before it is dispatched, from the order in My Account or by contacting us. A cancelled order paid online is refunded in full.",
+          "We cannot change the items, sizes or address on an order once it is placed. If something is wrong, cancel it before dispatch and order again. After dispatch, use the return process instead."
+        ]
+      },
+      {
+        "itemKey": "faq_order_confirmation",
+        "category": "Orders",
+        "question": "I paid but did not get a confirmation. What now?",
+        "answer": [
+          "An order is only confirmed once our systems verify the payment with the gateway, which can take a minute or two. Check Orders in My Account first — if the order is there, it went through.",
+          "If money left your account and no order appears after 30 minutes, write to support@corcotton.in with the amount and time. Payments that never reach a confirmed order are returned by the bank automatically, usually within 5 to 7 working days."
+        ]
+      },
+      {
+        "itemKey": "faq_payment_methods",
+        "category": "Payment",
+        "question": "Which payment methods can I use?",
+        "answer": [
+          "You can pay by card, UPI, netbanking or wallet through our payment partner. Cash on delivery is offered on some orders.",
+          "Card and UPI details are entered on the payment provider’s own secure page. CORCOTTON never sees or stores your card number, CVV, UPI PIN or netbanking password."
+        ]
+      },
+      {
+        "itemKey": "faq_cod",
+        "category": "Payment",
+        "question": "Is cash on delivery available?",
+        "answer": [
+          "Sometimes. Cash on delivery depends on three things at once: your delivery PIN code, the value of the order, and our courier supporting cash collection at that address.",
+          "If it is available for your order, you will see it as an option on the payment step. If it is not, only online payment is offered."
+        ]
+      },
+      {
+        "itemKey": "faq_partial_cod",
+        "category": "Payment",
+        "question": "What is the advance on a cash-on-delivery order?",
+        "answer": [
+          "On some cash-on-delivery orders we ask for part of the amount online and the rest at your door. The exact split is shown on the payment page before you pay anything.",
+          "Whatever you hand to the delivery agent is always refundable. The advance may be non-refundable, and the payment page says so plainly before you pay it. A fully prepaid order is never affected by this."
+        ]
+      },
+      {
+        "itemKey": "faq_shipping_cost",
+        "category": "Shipping",
+        "question": "How much does delivery cost?",
+        "answer": [
+          "Standard delivery is free on every order, anywhere our courier delivers.",
+          "Where express delivery is available, its exact charge is shown at checkout before you pay. You are never charged for shipping without seeing the amount first."
+        ]
+      },
+      {
+        "itemKey": "faq_shipping_time",
+        "category": "Shipping",
+        "question": "How long will my order take?",
+        "answer": [
+          "The delivery window shown at checkout comes from the courier for your specific PIN code, so it reflects the real distance rather than a fixed promise. Metro addresses are usually faster than remote ones.",
+          "Orders are dispatched from our warehouse in Ghazipur, Uttar Pradesh. The window is an estimate, not a guarantee — weather, strikes and public holidays can add a day or two."
+        ]
+      },
+      {
+        "itemKey": "faq_shipping_pincode",
+        "category": "Shipping",
+        "question": "Do you deliver to my PIN code?",
+        "answer": [
+          "Enter your PIN code in the Check Delivery box on any product page. It tells you immediately whether we deliver there and roughly when.",
+          "If your PIN code is not serviceable today, it may be later — our courier network changes. Write to us and we will tell you what we can."
+        ]
+      },
+      {
+        "itemKey": "faq_return_window",
+        "category": "Returns",
+        "question": "How long do I have to return something?",
+        "answer": [
+          "Seven days from the day your order is delivered, counted from the delivery date the courier records, not the date you ordered.",
+          "After seven days the option no longer appears on the order. The full conditions are on our Returns & Exchanges page."
+        ]
+      },
+      {
+        "itemKey": "faq_return_how",
+        "category": "Returns",
+        "question": "How do I return or exchange an item?",
+        "answer": [
+          "Open Orders in My Account, choose the delivered order, and select Return or Exchange. Pick the items, a quantity and a reason, and submit.",
+          "We arrange a reverse pickup from your delivery address wherever the courier services it. Keep the item packed with its tags on, ready for the pickup agent."
+        ]
+      },
+      {
+        "itemKey": "faq_return_condition",
+        "category": "Returns",
+        "question": "What condition does a returned item need to be in?",
+        "answer": [
+          "Unworn, unwashed, with its original tags and packaging intact, and free of stains, odours, perfume or damage caused after delivery.",
+          "Every return is inspected when it reaches us. An item that fails inspection is sent back to you and is not refunded."
+        ]
+      },
+      {
+        "itemKey": "faq_refund_time",
+        "category": "Refunds",
+        "question": "When will I get my refund?",
+        "answer": [
+          "We raise the refund within one working day of approving your return. Your bank then takes as long as it needs — usually 5 to 7 working days.",
+          "Refunds go back to the method you paid with. For a cash-on-delivery order there is nothing to reverse, so we issue store credit or transfer to a bank account you give us. Full detail is on our Refund Policy page."
+        ]
+      },
+      {
+        "itemKey": "faq_wrong_item",
+        "category": "Refunds",
+        "question": "What if my item arrives damaged or is the wrong one?",
+        "answer": [
+          "Tell us within 48 hours of delivery, with photographs, at support@corcotton.in. We collect it at our cost.",
+          "You choose whether you want a replacement or a full refund, including any delivery charge you paid."
+        ]
+      },
+      {
+        "itemKey": "faq_size",
+        "category": "Sizing",
+        "question": "How do I choose the right size?",
+        "answer": [
+          "Each product page has its own Size Guide with the measurements of that exact garment, taken flat. Compare them to a garment you already own and like the fit of — that is more reliable than guessing from a body measurement.",
+          "Our oversized fits run deliberately roomy. If you are between sizes and want a closer fit, take the smaller one."
+        ]
+      },
+      {
+        "itemKey": "faq_size_wrong",
+        "category": "Sizing",
+        "question": "What if the size does not fit?",
+        "answer": [
+          "Request a replacement in a different size within seven days of delivery, from the order in My Account. Subject to that size being in stock."
+        ]
+      },
+      {
+        "itemKey": "faq_care",
+        "category": "Product",
+        "question": "How should I wash and care for my CORCOTTON pieces?",
+        "answer": [
+          "Cold machine wash inside out with like colours, mild detergent, no bleach, and dry in shade. Our Care Guide covers this in more detail.",
+          "A product’s own care label always takes priority over general guidance."
+        ]
+      },
+      {
+        "itemKey": "faq_stock",
+        "category": "Product",
+        "question": "An item I want is out of stock. Will it come back?",
+        "answer": [
+          "Often, but we cannot promise a date. We produce in considered runs rather than continuously, so a restock depends on the fabric and the production slot.",
+          "Subscribe to our newsletter or write to us about the specific piece and size, and we will tell you what we know."
+        ]
+      },
+      {
+        "itemKey": "faq_fabric",
+        "category": "Fabric",
+        "question": "What fabric are your clothes made from?",
+        "answer": [
+          "Our core range is 100% natural cotton. Every product page lists its exact composition under Product Details, alongside the fit and the country of origin — we do not describe a blend as cotton.",
+          "We choose fabric we can stand behind for the wash it will actually get, not for how it photographs on day one."
+        ]
+      },
+      {
+        "itemKey": "faq_gsm",
+        "category": "Fabric",
+        "question": "What does GSM mean, and what weight are your tees?",
+        "answer": [
+          "GSM is grams per square metre — the weight of the fabric. A higher number means a denser, heavier, more opaque garment that holds its shape; a lower number means something lighter and airier.",
+          "Our oversized t-shirts are 240 GSM, which is a heavyweight for a tee: structured enough to fall properly from the shoulder rather than cling, and thick enough not to go sheer. The exact GSM of every product is on its own page under Product Details."
+        ]
+      },
+      {
+        "itemKey": "faq_shrink",
+        "category": "Fabric",
+        "question": "Will my cotton garment shrink?",
+        "answer": [
+          "Our fabric is pre-shrunk, so a correctly washed garment holds its measurements. Cotton is a natural fibre, so expect a small amount of settling after the first wash — not a change of size.",
+          "Hot water and a tumble dryer are what actually shrink cotton. Cold wash and dry in shade and it will not."
+        ]
+      },
+      {
+        "itemKey": "faq_account_login",
+        "category": "Account",
+        "question": "How do I sign in?",
+        "answer": [
+          "Enter your mobile number or email on the login page and we send you a one-time code. You can also continue with Google.",
+          "There is no password to remember or lose. Never share the code with anyone, including someone claiming to be from CORCOTTON — we will never ask you for it."
+        ]
+      },
+      {
+        "itemKey": "faq_review",
+        "category": "Account",
+        "question": "Can I leave a review?",
+        "answer": [
+          "Yes, on any item you have actually received. Go to the delivered order in My Account, or to Reviews, and write it there.",
+          "Reviews are checked before they appear and are published under your first name. We never edit the words of a review we publish."
+        ]
+      },
+      {
+        "itemKey": "faq_contact",
+        "category": "Support",
+        "question": "How do I reach a person?",
+        "answer": [
+          "Email support@corcotton.in or call +91 5493358300. Include your order number if your question is about an order — it gets you a useful answer far faster.",
+          "You can also raise a query from Help & Support in My Account, which keeps the whole conversation attached to your order."
+        ]
+      },
+      {
+        "itemKey": "faq_bulk",
+        "category": "Bulk & wholesale",
+        "question": "Do you take bulk or wholesale orders?",
+        "answer": [
+          "Yes, we take bulk enquiries — corporate gifting, teams, events and stockists. Pricing and lead time depend on the quantity, the sizes and whether you want any customisation, so there is no fixed rate card.",
+          "Write to support@corcotton.in with the products, the size breakdown, the quantity and the date you need them by, and we will come back with what is possible. You can also raise it from Help & Support in your account."
+        ]
+      },
+      {
+        "itemKey": "faq_bulk_custom",
+        "category": "Bulk & wholesale",
+        "question": "Can you add our logo or custom branding?",
+        "answer": [
+          "On bulk orders, often — it depends on the placement, the method and the quantity. Send us the artwork and the quantity along with your enquiry and we will tell you what we can do and what it costs.",
+          "We do not take custom branding on single orders from the website."
+        ]
+      }
+    ]
+  }
+}

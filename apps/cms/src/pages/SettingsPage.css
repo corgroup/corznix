@@ -1,0 +1,78 @@
+/* Settings — company profile, my account, user management (Phase 6). */
+
+.st-tabs {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-4);
+  overflow-x: auto;
+}
+.st-tab {
+  appearance: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 9px 15px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.st-tab:hover { color: var(--text); }
+.st-tab--active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.st-panel { max-width: 100%; }
+.st-panel h3 { margin-top: var(--space-5); margin-bottom: var(--space-2); }
+.st-panel h3:first-child { margin-top: 0; }
+
+.st-profile-facts {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 420px;
+  margin: 0 0 var(--space-4);
+}
+.st-profile-facts > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.st-profile-facts dt { color: var(--text-muted); font-size: 13px; }
+.st-profile-facts dd { font-weight: 600; }
+
+.st-create-form {
+  max-width: 640px;
+  margin-bottom: var(--space-5);
+}
+
+.st-row-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.st-access-row td {
+  background: var(--surface-2);
+  padding: var(--space-3) var(--space-4);
+}
+
+.st-access-panel { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.st-grant-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.st-inline-select {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+}

@@ -1,0 +1,341 @@
+/* ============================================================ *
+ *  CONTROLS — one design system for every button, input and
+ *  form control in the CMS.
+ *
+ *  Before this file the CMS had no shared control styling beyond
+ *  `.form-field input`. The class `.form-field__input` was used on
+ *  ~70 controls across 21 screens and defined nowhere, so those
+ *  rendered as bare browser inputs (18–21px tall, square corners);
+ *  every other screen re-declared its own search/select/textarea
+ *  rule with a different height, padding, radius and font. Heights
+ *  ranged 18–41px and radii 0–10px for the same kind of control.
+ *
+ *  Layers, lowest specificity first:
+ *   1. Native defaults inside :where() — zero specificity, so a
+ *      component's own class still wins where it means to differ
+ *      (switch tracks, borderless inputs inside a composite field).
+ *   2. Named primitives: .form-field, .form-field__input, .btn.
+ *   3. Size modifier: --sm for dense tables and toolbars.
+ *
+ *  Loaded from main.jsx after base.css, before legacy.css and every
+ *  component stylesheet.
+ * ============================================================ */
+
+:root {
+  --control-h: 40px;
+  --control-h-sm: 32px;
+  --control-pad-x: 12px;
+  --control-pad-x-sm: 10px;
+  --control-radius: var(--radius-sm);
+  --control-font: 14px;
+  --control-font-sm: 13px;
+
+  /* A faint lilac fill so fields read as places to type, not blank page. */
+  --control-bg: #fcfbff;
+  --control-bg-focus: var(--cms-surface);
+  --control-bg-disabled: var(--cms-surface-muted);
+  --control-border: var(--cms-border-strong);
+  --control-border-hover: #c4b3ec;
+  --control-text: var(--cms-text);
+  --control-text-disabled: var(--cms-text-faint);
+  --control-placeholder: var(--cms-text-faint);
+  --control-ring: 0 0 0 3px rgba(109, 40, 217, 0.18);
+  --control-ring-danger: 0 0 0 3px rgba(179, 39, 27, 0.16);
+
+  --field-gap: 6px;
+  --label-size: 12.5px;
+}
+
+/* ---------- 1. native text-like controls ---------- */
+:where(
+  input:not([type='checkbox'], [type='radio'], [type='range'], [type='color'], [type='file'], [type='hidden'], [type='submit'], [type='button'], [type='reset'], [type='image']),
+  select,
+  textarea
+) {
+  box-sizing: border-box;
+  min-height: var(--control-h);
+  max-width: 100%;
+  padding: 0 var(--control-pad-x);
+  border: 1px solid var(--control-border);
+  border-radius: var(--control-radius);
+  background-color: var(--control-bg);
+  color: var(--control-text);
+  font: inherit;
+  font-size: var(--control-font);
+  line-height: 1.4;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+:where(input, select, textarea)::placeholder { color: var(--control-placeholder); opacity: 1; }
+
+:where(
+  input:not([type='checkbox'], [type='radio'], [type='range'], [type='color'], [type='file'], [type='hidden']),
+  select,
+  textarea
+):hover:not(:disabled, :focus) {
+  border-color: var(--control-border-hover);
+}
+
+:where(
+  input:not([type='checkbox'], [type='radio'], [type='range'], [type='color'], [type='file'], [type='hidden']),
+  select,
+  textarea
+):focus {
+  outline: none;
+  border-color: var(--cms-primary);
+  background-color: var(--control-bg-focus);
+  box-shadow: var(--control-ring);
+}
+
+:where(input, select, textarea)[aria-invalid='true'] { border-color: var(--danger); }
+:where(input, select, textarea)[aria-invalid='true']:focus { border-color: var(--danger); box-shadow: var(--control-ring-danger); }
+
+:where(input, select, textarea):disabled {
+  background-color: var(--control-bg-disabled);
+  border-color: var(--cms-border);
+  color: var(--control-text-disabled);
+  cursor: not-allowed;
+  opacity: 1;
+}
+:where(input, textarea)[readonly] { background-color: var(--control-bg-disabled); }
+
+/* Long content gets room: comfortable line height, vertical resize only. */
+:where(textarea) {
+  display: block;
+  width: 100%;
+  min-height: 96px;
+  padding: 10px var(--control-pad-x);
+  line-height: 1.55;
+  resize: vertical;
+}
+
+:where(select:not([multiple])) {
+  appearance: none;
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235b6472' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+:where(select[multiple]) { min-height: 112px; padding: 6px; }
+:where(select[multiple]) option { padding: 6px 8px; border-radius: 6px; }
+
+:where(input[type='search']) { appearance: none; }
+:where(input[type='date'], input[type='time'], input[type='datetime-local'], input[type='month']) { min-width: 0; }
+:where(input[type='date'], input[type='time'], input[type='datetime-local'], input[type='month'])::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* ---------- checkbox / radio / range / colour / file ---------- */
+:where(input[type='checkbox'], input[type='radio']) {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex: none;
+  accent-color: var(--cms-primary);
+  cursor: pointer;
+  vertical-align: middle;
+}
+:where(input[type='checkbox'], input[type='radio']):disabled { cursor: not-allowed; opacity: 0.55; }
+:where(input[type='checkbox'], input[type='radio'], input[type='range'], input[type='color']):focus-visible {
+  outline: 2px solid var(--cms-primary);
+  outline-offset: 2px;
+}
+:where(input[type='range']) { accent-color: var(--cms-primary); cursor: pointer; }
+:where(input[type='color']) {
+  width: var(--control-h);
+  height: var(--control-h);
+  padding: 3px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--control-radius);
+  background: var(--control-bg);
+  cursor: pointer;
+}
+
+:where(input[type='file']) { max-width: 100%; font: inherit; font-size: 13px; color: var(--cms-text-muted); }
+:where(input[type='file'])::file-selector-button {
+  min-height: var(--control-h-sm);
+  margin-right: 10px;
+  padding: 0 12px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--control-radius);
+  background: var(--control-bg);
+  color: var(--control-text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+:where(input[type='file'])::file-selector-button:hover { background: var(--cms-surface-muted); }
+
+/* Every button reads the CMS font, and keyboard focus is always visible. */
+:where(button) { font: inherit; }
+:where(button, [role='button'], a):focus-visible { outline: 2px solid var(--cms-primary); outline-offset: 2px; }
+
+/* ---------- 2. field layout ---------- */
+.form-field { display: flex; flex-direction: column; gap: var(--field-gap); min-width: 0; }
+.form-field > label,
+.form-field__label {
+  font-size: var(--label-size);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cms-text-muted);
+}
+.form-field__req { margin-left: 2px; color: var(--danger); }
+.form-field__hint { margin: 0; font-size: 12px; line-height: 1.45; color: var(--cms-text-faint); overflow-wrap: anywhere; }
+.form-field__error { margin: 0; font-size: 12px; line-height: 1.45; font-weight: 600; color: var(--danger); }
+
+/* The explicit control class. Same look as the native defaults, but a named
+   class also wins over page-level rules written for a bare `input`. */
+.form-field__input { width: 100%; min-width: 0; }
+
+/* A form section: a titled group of fields. */
+.form-section { display: flex; flex-direction: column; gap: 14px; }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 14px 16px; }
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+
+/* Checkbox or radio with its label on one line; the whole row is the hit area. */
+.check-field {
+  display: inline-flex;
+  align-self: end;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--control-h);
+  font-size: var(--control-font-sm);
+  font-weight: 600;
+  color: var(--cms-text);
+  cursor: pointer;
+}
+.check-field:has(input:disabled) { color: var(--cms-text-faint); cursor: not-allowed; }
+
+/* Page-local field wrappers that want a readable maximum width. */
+.promo-field { max-width: 280px; }
+
+/* ---------- 3. dense size ---------- */
+.control--sm,
+.form-field--sm :where(input:not([type='checkbox'], [type='radio'], [type='range'], [type='color'], [type='file'], [type='hidden']), select) {
+  min-height: var(--control-h-sm);
+  padding-left: var(--control-pad-x-sm);
+  padding-right: var(--control-pad-x-sm);
+  font-size: var(--control-font-sm);
+}
+select.control--sm,
+.form-field--sm select { padding-right: 30px; background-position: right 10px center; }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  min-height: var(--control-h);
+  max-width: 100%;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: var(--control-radius);
+  font: inherit;
+  font-size: var(--control-font);
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease, box-shadow 0.12s ease;
+}
+.btn:hover { text-decoration: none; }
+.btn:focus-visible { outline: none; box-shadow: var(--control-ring); }
+.btn:disabled,
+.btn[aria-disabled='true'] { opacity: 0.5; cursor: not-allowed; }
+.btn[aria-busy='true'] { cursor: progress; opacity: 0.85; }
+.btn svg { width: 16px; height: 16px; flex: none; }
+
+.btn--primary { background: linear-gradient(180deg, #7a3be3 0%, var(--cms-primary) 100%); color: var(--cms-primary-contrast); box-shadow: 0 1px 2px rgba(91, 33, 182, 0.28); }
+.btn--primary:hover:not(:disabled) { background: var(--cms-primary-hover); }
+.btn--primary:active:not(:disabled) { background: #4c1d95; }
+
+.btn--secondary { background: var(--control-bg); color: var(--cms-text); border-color: var(--control-border); }
+.btn--secondary:hover:not(:disabled) { background: var(--cms-surface-muted); border-color: var(--control-border-hover); }
+.btn--secondary:active:not(:disabled) { background: #eceef3; }
+
+.btn--ghost { background: transparent; color: var(--cms-text-muted); }
+.btn--ghost:hover:not(:disabled) { background: var(--cms-surface-muted); color: var(--cms-text); }
+.btn--ghost:active:not(:disabled) { background: #eceef3; }
+
+.btn--danger { background: var(--control-bg); color: var(--danger); border-color: rgba(179, 39, 27, 0.45); }
+.btn--danger:hover:not(:disabled) { background: var(--danger-soft); border-color: var(--danger); }
+.btn--danger:active:not(:disabled) { background: #fbd9d5; }
+.btn--danger:focus-visible { box-shadow: var(--control-ring-danger); }
+
+/* Colour carries meaning, the same way on every screen:
+     primary (purple)  save / create — the main action of a form
+     success (green)   publish / go live / activate
+     soft (lilac)      add / upload / new — constructive, not final
+     info (blue)       edit / preview / view
+     warning (amber)   archive / pause / hide — reversible caution
+     danger (red)      delete / remove — outline; danger-solid confirms it
+     secondary/ghost   cancel / close / back */
+.btn--success { background: linear-gradient(180deg, #23904f 0%, var(--success) 100%); color: #fff; box-shadow: 0 1px 2px rgba(28, 122, 67, 0.25); }
+.btn--success:hover:not(:disabled) { background: #176a3a; }
+.btn--success:active:not(:disabled) { background: #125a31; }
+.btn--success:focus-visible { box-shadow: 0 0 0 3px rgba(28, 122, 67, 0.22); }
+
+.btn--soft { background: var(--cms-primary-soft); color: var(--cms-primary); border-color: #e0d3fb; }
+.btn--soft:hover:not(:disabled) { background: #e8ddfc; border-color: #c9b3f5; }
+.btn--soft:active:not(:disabled) { background: #ddcdfa; }
+
+.btn--info { background: var(--info-soft); color: var(--info); border-color: #cfdcf6; }
+.btn--info:hover:not(:disabled) { background: #dae5fa; border-color: #b3c9f0; }
+.btn--info:active:not(:disabled) { background: #cddcf7; }
+.btn--info:focus-visible { box-shadow: 0 0 0 3px rgba(37, 99, 201, 0.2); }
+
+.btn--warning { background: var(--warning-soft); color: var(--warning); border-color: #efd7a8; }
+.btn--warning:hover:not(:disabled) { background: #f7e2bb; border-color: #e3bf7c; }
+.btn--warning:active:not(:disabled) { background: #f3d8a6; }
+.btn--warning:focus-visible { box-shadow: 0 0 0 3px rgba(154, 97, 17, 0.2); }
+
+.btn--danger-solid { background: linear-gradient(180deg, #c93426 0%, var(--danger) 100%); color: #fff; box-shadow: 0 1px 2px rgba(179, 39, 27, 0.25); }
+.btn--danger-solid:hover:not(:disabled) { background: #962016; }
+.btn--danger-solid:active:not(:disabled) { background: #7f1b12; }
+.btn--danger-solid:focus-visible { box-shadow: var(--control-ring-danger); }
+
+.btn--sm { min-height: var(--control-h-sm); padding: 0 12px; font-size: var(--control-font-sm); gap: 6px; }
+.btn--sm svg { width: 14px; height: 14px; }
+.btn--icon { width: var(--control-h); padding: 0; }
+.btn--icon.btn--sm { width: var(--control-h-sm); }
+.btn--block { width: 100%; }
+
+.btn__spinner {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) { .btn__spinner { animation-duration: 1.6s; } }
+
+/* Text-style action inside tables and cards. */
+.linkish {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cms-primary);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.linkish:hover:not(:disabled) { text-decoration: underline; }
+.linkish:disabled { color: var(--cms-text-faint); cursor: not-allowed; text-decoration: none; }
+.linkish--danger,
+.linkish.is-danger { color: var(--danger); }

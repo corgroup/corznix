@@ -1,0 +1,203 @@
+/* ============================================================ *
+ *  LEGACY FEATURE-PAGE STYLES
+ *
+ *  Styles for CMS screens that have NOT yet been migrated to the
+ *  component-wise structure (Products, Orders, Content, Staff,
+ *  Reports, …). Kept verbatim so those pages render unchanged;
+ *  they now read the light + purple tokens through the compat
+ *  aliases in tokens.css.
+ *
+ *  Do not add new rules here. New/redesigned components get their
+ *  own `.css` file next to the component. As each screen is
+ *  redesigned, its rules move out of this file.
+ * ============================================================ */
+
+/* ---------- login ---------- */
+/* Redesigned 2026-09-05 — moved to components/auth/AuthShell.css. The
+   .sidebar__brand-mark base rule stays here since Sidebar.jsx still uses it
+   for a non-SVG brand fallback (see Sidebar.css's --svg override). */
+.sidebar__brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 36px; height: 36px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ---------- page shell ---------- */
+.page-shell__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 16px;
+  margin-bottom: 20px;
+}
+.page-shell__title { margin: 0; font-size: 20px; }
+.page-shell__description { margin: 4px 0 0; color: var(--text-muted); }
+/* Header actions (often filters) may wrap below the title and shrink with the
+   window; a non-shrinking slot pushed narrow screens wider than the viewport. */
+.page-shell__actions { display: flex; flex-wrap: wrap; gap: 8px; min-width: 0; max-width: 100%; }
+.page-shell__actions > * { min-width: 0; max-width: 100%; }
+
+/* ---------- legacy stat cards / sections (Product Studio, Inventory, …) ---------- */
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.stat-card__label { margin: 0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-faint); }
+.stat-card__value { margin: 6px 0 2px; font-size: 16px; font-weight: 600; }
+.stat-card__meta { margin: 0; font-size: 12px; color: var(--text-muted); word-break: break-word; }
+.stat-card--good { border-left: 3px solid var(--good-fg); }
+.stat-card--warn { border-left: 3px solid var(--warn-fg); }
+.stat-card--bad { border-left: 3px solid var(--bad-fg); }
+a.stat-card:hover { border-color: var(--accent); text-decoration: none; }
+.stat-card--neutral { border-left: 3px solid var(--border-strong); }
+
+.dash-section { margin-bottom: 28px; }
+.dash-section__title { font-size: 14px; margin: 0 0 12px; color: var(--text-muted); }
+.permission-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.shortcut-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+a.shortcut:hover { border-color: var(--accent); text-decoration: none; }
+.shortcut--disabled { opacity: 0.55; }
+.shortcut__title { font-weight: 600; }
+.shortcut__desc { font-size: 12px; color: var(--text-muted); }
+
+/* ---------- tables ---------- */
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--surface); }
+.data-table th, .data-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.data-table th { background: var(--surface-2); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table__empty { text-align: center; color: var(--text-muted); }
+
+.pill { display: inline-block; font-size: 11px; font-weight: 600; border-radius: 999px; padding: 2px 8px; }
+.pill--good { background: var(--good-bg); color: var(--good-fg); }
+.pill--muted { background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); }
+
+/* ---------- centered 403/404 ---------- */
+.centered-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 64px 20px;
+}
+.centered-page__code { font-size: 44px; font-weight: 800; margin: 0; color: var(--text-faint); }
+.centered-page__title { margin: 0; font-size: 20px; }
+.centered-page__text { margin: 0 0 12px; color: var(--text-muted); max-width: 420px; }
+
+/* ============ Product Studio (Wave 8B) ============ */
+.filter-bar {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-bottom: 16px;
+}
+.filter-bar__search { flex: 1; min-width: 200px; }
+.filter-bar .form-field { min-width: 150px; }
+.filter-bar .btn { align-self: flex-end; }
+
+.data-table__row-link { cursor: pointer; }
+.data-table__row-link:hover td { background: var(--surface-2); }
+.data-table__sub { font-size: 11px; color: var(--text-faint); margin-top: 2px; white-space: normal; }
+.data-table--nested { margin: 8px 0 4px; border: 1px solid var(--border); border-radius: 6px; }
+.data-table--nested th { background: transparent; }
+
+.pager {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 14px; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; gap: 10px;
+}
+.pager__buttons { display: flex; gap: 8px; }
+
+.badge-pill {
+  display: inline-block; font-size: 11px; font-weight: 600; border-radius: 999px; padding: 2px 9px;
+}
+.badge-pill--good { background: var(--good-bg); color: var(--good-fg); }
+.badge-pill--warn { background: var(--warn-bg); color: var(--warn-fg); }
+.badge-pill--bad { background: var(--bad-bg); color: var(--bad-fg); }
+.badge-pill--muted { background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); }
+
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 18px; overflow-x: auto; }
+.tabs__tab {
+  background: none; border: none; border-bottom: 2px solid transparent; min-height: var(--control-h); padding: 0 14px;
+  font: inherit; font-weight: 600; font-size: 13px; color: var(--text-muted); cursor: pointer; white-space: nowrap;
+}
+.tabs__tab:hover { color: var(--text); }
+.tabs__tab--active { color: var(--accent); border-bottom-color: var(--accent); }
+.tabs__panel[aria-busy="true"] { opacity: 0.6; }
+
+.editor-actions { display: flex; align-items: center; gap: 10px; }
+
+.editor-form { display: flex; flex-direction: column; gap: 14px; max-width: 900px; }
+.editor-form__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.editor-form__label { font-size: var(--label-size); font-weight: 600; color: var(--text-muted); margin-bottom: -6px; }
+.editor-form textarea, .tab-body textarea { width: 100%; }
+.editor-form__fieldset { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+.editor-form__fieldset legend { font-size: 12px; font-weight: 700; color: var(--text-muted); padding: 0 6px; }
+.checkbox-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 6px; font-size: 13px; }
+.checkbox-grid label { display: flex; gap: 6px; align-items: center; }
+
+.tab-body { display: flex; flex-direction: column; gap: 16px; }
+.tab-body__hint { margin: 0; font-size: 12px; color: var(--text-muted); }
+
+.side-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.side-list__item {
+  width: 100%; text-align: left; background: none; border: 1px solid transparent; border-radius: 6px;
+  padding: 7px 9px; font: inherit; font-size: 13px; color: var(--text-muted); cursor: pointer;
+}
+.side-list__item:hover { color: var(--text); background: var(--surface-2); }
+.side-list__item--active { color: var(--text); background: var(--surface-2); border-color: var(--border); font-weight: 600; }
+
+.variant-block { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; background: var(--surface); }
+.variant-block__head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.variant-block__swatch { width: 18px; height: 18px; border-radius: 4px; border: 1px solid var(--border-strong); flex-shrink: 0; }
+.variant-block__badge { margin-left: 8px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid var(--border-strong); border-radius: 4px; padding: 1px 5px; }
+.variant-block__meta { margin-left: 8px; font-size: 11px; color: var(--text-faint); }
+
+.inline-editor { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; padding: 12px; border: 1px dashed var(--border-strong); border-radius: 8px; margin-top: 8px; }
+.inline-editor--row { border-style: solid; background: var(--surface-2); width: 100%; }
+.inline-editor--compact { margin-top: 6px; }
+.inline-editor__actions { display: flex; gap: 8px; }
+.inline-editor .form-field { min-width: 130px; }
+.inline-editor .inline-alert { flex-basis: 100%; }
+
+.cell-input {
+  width: 96px; min-height: var(--control-h-sm);
+  padding: 0 var(--control-pad-x-sm); font-size: var(--control-font-sm);
+}
+
+.unit-field { display: flex; flex-direction: column; gap: 5px; }
+.unit-field label { font-size: var(--label-size); font-weight: 600; color: var(--text-muted); }
+.unit-field__row { display: flex; gap: 6px; align-items: center; }
+.unit-field__row input { flex: 1; min-width: 0; }
+.unit-field__row .form-field { min-width: 70px; }
+.unit-field__unit { font-size: 13px; color: var(--text-muted); }
+
+.shipping-status { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+.dash-grid--tight { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); margin-bottom: 0; }
+
+.media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+.media-grid__item { margin: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.media-grid__item img { width: 100%; height: 140px; object-fit: cover; display: block; background: var(--surface-2); }
+.media-grid__item figcaption { padding: 6px 8px; font-size: 11px; color: var(--text-muted); }

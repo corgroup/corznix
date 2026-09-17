@@ -1,0 +1,14 @@
+.section-card {
+  display: flex; flex-direction: column;
+  background: var(--cms-surface); border: 1px solid var(--cms-border);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  min-width: 0;
+}
+.section-card__head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: var(--space-3); padding: 14px 16px; border-bottom: 1px solid var(--cms-border);
+}
+.section-card__title { margin: 0; font-size: 14px; font-weight: 600; color: var(--cms-text); }
+.section-card__subtitle { margin: 2px 0 0; font-size: 12px; color: var(--cms-text-faint); }
+.section-card__action { font-size: 12px; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+.section-card__body { padding: 16px; flex: 1; }

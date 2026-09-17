@@ -1,0 +1,47 @@
+/* Hero slides builder — the layout and controls come from
+   ./header/HeaderBuilder.css; only what is new to this screen lives here. */
+
+.hbn-thumb {
+  display: block; flex: none; width: 56px; height: 34px; overflow: hidden;
+  border-radius: var(--radius-sm); background: var(--border);
+}
+.hbn-thumb img, .hbn-thumb video { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.hbn-empty { display: grid; gap: 8px; padding: 14px; font-size: 13px; border: 1px dashed var(--border); border-radius: var(--radius-sm); }
+.hbn-empty p { margin: 0; }
+.hbn-empty__actions { display: flex; gap: 8px; }
+
+.hbn-order { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; }
+.hbn-order .hb-panel__note { margin: 0; }
+
+.hbn-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.hbn-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+@media (max-width: 900px) {
+  .hbn-media, .hbn-two { grid-template-columns: minmax(0, 1fr); }
+}
+
+.hero-b .hbn-set { display: grid; gap: 12px; margin-top: 16px; }
+
+/* Where the text sits: a small 3 × 3 stand-in for the slide. */
+.hbn-pos {
+  display: grid; grid-template-columns: repeat(3, 38px); grid-template-rows: repeat(3, 24px); gap: 4px;
+  width: max-content; padding: 6px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface);
+}
+.hbn-pos__cell {
+  position: relative; padding: 0; cursor: pointer;
+  background: transparent; border: 1px dashed var(--border); border-radius: 4px;
+}
+.hbn-pos__cell span { position: absolute; inset: 8px 7px; border-radius: 2px; background: transparent; }
+.hbn-pos__cell:hover:not(:disabled) span { background: var(--border); }
+.hbn-pos__cell--on { border-style: solid; border-color: var(--accent); }
+.hbn-pos__cell--on span, .hbn-pos__cell--on:hover:not(:disabled) span { background: var(--accent); }
+.hbn-pos__cell:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.hbn-pos__cell:disabled { cursor: not-allowed; }
+
+.hbn-range { width: 100%; accent-color: var(--accent); }
+
+.hbn-actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);
+}
+.hbn-actions .hb-danger-link { margin-left: auto; }

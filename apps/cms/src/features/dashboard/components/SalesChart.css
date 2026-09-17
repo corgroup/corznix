@@ -1,0 +1,24 @@
+.sales-chart { margin: 0; }
+.sales-chart__canvas { position: relative; }
+.sales-chart__svg { width: 100%; height: 200px; display: block; overflow: visible; }
+.sales-chart__grid { stroke: var(--cms-border); stroke-width: 1; }
+.sales-chart__line { stroke: var(--cms-primary); stroke-width: 2; }
+.sales-chart__cursor { stroke: var(--cms-border-strong); stroke-width: 1; stroke-dasharray: 3 3; }
+.sales-chart__dot { fill: var(--cms-surface); stroke: var(--cms-primary); stroke-width: 2; }
+.sales-chart__svg rect:focus-visible { outline: 2px solid var(--cms-primary); }
+
+.sales-chart__tooltip {
+  position: absolute; top: -4px; transform: translateX(-50%);
+  background: var(--cms-surface); color: var(--cms-text); padding: 7px 10px;
+  border: 1px solid var(--cms-border); box-shadow: var(--shadow);
+  border-radius: var(--radius-sm); font-size: 11px; pointer-events: none;
+  display: flex; flex-direction: column; gap: 1px; white-space: nowrap; z-index: 2;
+}
+.sales-chart__tooltip-value { font-weight: 700; font-size: 12px; color: var(--cms-primary); }
+.sales-chart__tooltip-sub, .sales-chart__tooltip-date { color: var(--cms-text-muted); }
+
+.sales-chart__axis { position: relative; height: 16px; margin-top: 4px; }
+.sales-chart__axis span { position: absolute; transform: translateX(-50%); font-size: 11px; color: var(--cms-text-faint); }
+.sales-chart__axis span:first-child { transform: none; }
+.sales-chart__axis span:last-child { transform: translateX(-100%); }
+.sales-chart__scale { margin: 8px 0 0; font-size: 11px; color: var(--cms-text-faint); }

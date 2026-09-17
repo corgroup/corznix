@@ -1,0 +1,28 @@
+.entity-usage {
+  display: flex; flex-direction: column; gap: 6px; margin: 4px 0 0;
+  padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-2);
+  font-size: 13px; color: var(--text);
+}
+.entity-usage--muted { color: var(--text-muted); background: transparent; border-style: dashed; }
+.entity-usage--error { color: var(--danger); background: var(--danger-soft); border-color: transparent; }
+.entity-usage__summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;
+  padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.entity-usage__summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.entity-usage__chev { color: var(--text-faint); font-size: 11px; }
+.entity-usage__hint { margin: 0; font-size: 12px; color: var(--text-muted); }
+.entity-usage__groups { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.entity-usage__area { margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); }
+.entity-usage__list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.entity-usage__list li {
+  display: flex; flex-wrap: wrap; gap: 2px 8px; padding: 6px 8px; border-radius: var(--radius-sm);
+  background: var(--surface); border: 1px solid var(--border); min-width: 0;
+}
+.entity-usage__where { color: var(--text); overflow-wrap: anywhere; }
+.entity-usage__label { color: var(--text-muted); overflow-wrap: anywhere; }
+.entity-usage__dialog { display: flex; flex-direction: column; gap: 10px; max-height: min(60vh, 520px); overflow-y: auto; }
+.entity-usage__dialog > p { margin: 0; }
+.entity-usage__tip { font-size: 12px; color: var(--text-muted); }
+.entity-usage__blockers { margin: 4px 0; padding-left: 18px; }
+.entity-usage__note { margin: 10px 0 0; font-size: 12px; color: var(--text-muted); }

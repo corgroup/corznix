@@ -1,0 +1,155 @@
+/* Payments — COD control and payment monitoring.
+   Built on the CMS tokens, so it follows light/dark and the accent with
+   everything else rather than hardcoding a palette of its own. */
+
+.pay-card {
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+/* A card whose head is an icon tile, a title/description block, and controls
+   pushed to the right. Wraps rather than crushing on a narrow screen. */
+.pay-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.pay-card__icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  background: var(--cms-primary-soft);
+  color: var(--cms-primary);
+}
+.pay-card__titles { flex: 1 1 260px; min-width: 0; }
+.pay-card__title { margin: 0; font-size: 15px; font-weight: 600; }
+.pay-card__desc { margin: 2px 0 0; font-size: 12.5px; color: var(--cms-text-muted); line-height: 1.5; }
+.pay-card__actions { flex: 0 0 auto; display: flex; align-items: center; gap: var(--space-3); }
+
+/* Status chip with a leading dot — the dot carries the state, the word says it. */
+.pay-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 600; white-space: nowrap;
+  background: var(--cms-surface-muted); color: var(--cms-text-muted);
+  border: 1px solid var(--cms-border);
+}
+.pay-chip::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.pay-chip--good { background: var(--good-bg); color: var(--good-fg); border-color: transparent; }
+.pay-chip--warn { background: var(--warn-bg); color: var(--warn-fg); border-color: transparent; }
+
+/* The big switch. Deliberately larger than the table toggles: this one turns
+   COD on or off for the whole store. */
+.pay-toggle { position: relative; display: inline-block; width: 46px; height: 26px; flex: 0 0 auto; }
+.pay-toggle input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.pay-toggle__track {
+  position: absolute; inset: 0; border-radius: 999px;
+  background: var(--cms-border-strong); transition: background 140ms ease; pointer-events: none;
+}
+.pay-toggle__track::after {
+  content: ''; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px;
+  border-radius: 50%; background: #fff; box-shadow: var(--shadow-sm); transition: transform 140ms ease;
+}
+.pay-toggle input:checked + .pay-toggle__track { background: var(--cms-primary); }
+.pay-toggle input:checked + .pay-toggle__track::after { transform: translateX(20px); }
+.pay-toggle input:disabled + .pay-toggle__track { opacity: 0.55; }
+.pay-toggle input:focus-visible + .pay-toggle__track { outline: 2px solid var(--cms-primary); outline-offset: 2px; }
+
+/* Why COD is not reachable. Amber, and it lists the actual blockers the
+   evaluator reports rather than a single vague sentence. */
+.pay-blockers {
+  margin-top: var(--space-4);
+  border: 1px solid var(--warning-soft);
+  border-radius: var(--radius);
+  background: var(--warn-bg);
+  overflow: hidden;
+}
+.pay-blockers__head {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: var(--space-3) var(--space-4); flex-wrap: wrap;
+}
+.pay-blockers__icon { color: var(--warn-fg); display: grid; place-items: center; }
+.pay-blockers__titles { flex: 1 1 240px; min-width: 0; }
+.pay-blockers__title { margin: 0; font-size: 13.5px; font-weight: 600; color: var(--warn-fg); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pay-blockers__sub { margin: 2px 0 0; font-size: 12px; color: var(--warn-fg); opacity: 0.85; }
+.pay-blockers__list { margin: 0; padding: 0; list-style: none; }
+.pay-blockers__row {
+  display: grid; grid-template-columns: 22px minmax(150px, 260px) 1fr; gap: var(--space-3);
+  align-items: start;
+  padding: 10px var(--space-4);
+  background: var(--cms-surface);
+  border-top: 1px solid var(--cms-border);
+  font-size: 12.5px;
+}
+.pay-blockers__row b { font-weight: 600; }
+.pay-blockers__row span { color: var(--cms-text-muted); }
+@media (max-width: 640px) {
+  .pay-blockers__row { grid-template-columns: 22px 1fr; }
+  .pay-blockers__row span { grid-column: 2; }
+}
+
+.pay-section-title { margin: var(--space-5) 0 2px; font-size: 15px; font-weight: 600; }
+.pay-section-sub { margin: 0 0 var(--space-3); font-size: 12.5px; color: var(--cms-text-muted); }
+
+/* Two summary cards side by side, collapsing to one column when narrow. */
+.pay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-4); }
+.pay-grid .pay-card { margin-bottom: 0; }
+
+/* Empty state inside a table — an icon, what is missing, and the one action
+   that fixes it. */
+.pay-empty { padding: var(--space-6) var(--space-4); text-align: center; }
+.pay-empty__icon {
+  width: 56px; height: 56px; margin: 0 auto var(--space-3);
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--cms-surface-muted); color: var(--cms-text-faint);
+}
+.pay-empty__title { margin: 0; font-size: 13.5px; font-weight: 600; }
+.pay-empty__body { margin: 4px 0 var(--space-3); font-size: 12.5px; color: var(--cms-text-muted); }
+
+.pay-note {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--cms-border); border-radius: var(--radius);
+  background: var(--cms-surface-muted);
+  font-size: 12.5px; color: var(--cms-text-muted);
+}
+
+/* The unsaved-changes bar. Only rendered when something is actually pending,
+   so it never implies there is work to save when there is none. */
+.pay-savebar {
+  position: sticky; bottom: 0; z-index: 3;
+  display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--cms-border); border-radius: var(--radius);
+  background: var(--cms-surface); box-shadow: var(--shadow-sm);
+}
+.pay-savebar__text { flex: 1 1 220px; font-size: 12.5px; color: var(--cms-text-muted); }
+
+.pay-search { position: relative; flex: 1 1 260px; }
+.pay-search__icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--cms-text-faint); pointer-events: none; }
+.pay-search input { width: 100%; padding-left: 36px; }
+
+.pay-form { border-top: 1px solid var(--cms-border); margin-top: var(--space-4); padding-top: var(--space-4); }
+.pay-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+@media (max-width: 640px) { .pay-form-row { grid-template-columns: 1fr; } }
+
+/* Monitoring — a money bucket. Count and amount always render together; a
+   count without its amount is how a payment dashboard starts misleading. */
+.pay-buckets { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+.pay-bucket {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--cms-border); border-radius: var(--radius); background: var(--cms-surface);
+}
+.pay-bucket__label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cms-text-muted); }
+.pay-bucket__amount { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.pay-bucket__amount--good { color: var(--success); }
+.pay-bucket__count { font-size: 12px; color: var(--cms-text-muted); }
