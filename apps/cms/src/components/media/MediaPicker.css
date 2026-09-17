@@ -1,0 +1,146 @@
+/* Shared image control — see MediaPicker.jsx for why it exists. */
+
+.media-picker { display: flex; flex-direction: column; gap: 8px; }
+
+.media-picker__label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cms-text-muted, #6b7280);
+}
+
+/* ---- empty state: drop zone ---- */
+.media-picker__dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 28px 16px;
+    border: 1.5px dashed var(--cms-border, #d7dae0);
+    border-radius: 10px;
+    background: var(--cms-surface-muted, #fafbfc);
+    text-align: center;
+    transition: border-color 150ms, background 150ms;
+}
+
+.media-picker__dropzone:hover { border-color: var(--cms-accent, #7c3aed); }
+
+.media-picker__dropzone-icon { font-size: 22px; line-height: 1; opacity: 0.55; }
+
+.media-picker__dropzone-title { margin: 0; font-size: 14px; font-weight: 600; }
+
+.media-picker__dropzone-hint {
+    margin: 0;
+    font-size: 12px;
+    color: var(--cms-text-muted, #6b7280);
+    max-width: 34ch;
+}
+
+.media-picker__dropzone-actions { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; justify-content: center; }
+
+/* ---- filled state ---- */
+.media-picker__selected {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid var(--cms-border, #d7dae0);
+    border-radius: 10px;
+    background: var(--cms-surface, #fff);
+}
+
+.media-picker__thumb {
+    width: 132px;
+    height: 74px;          /* ~16:9 so the crop reads like the storefront hero */
+    object-fit: cover;
+    border-radius: 6px;
+    background: var(--cms-surface-muted, #f3f4f6);
+    flex-shrink: 0;
+}
+
+.media-picker__selected-body { display: flex; flex-direction: column; gap: 10px; flex: 1 1 220px; min-width: 0; }
+.media-picker__info { min-width: 0; }
+.media-picker__file {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cms-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.media-picker__meta { margin: 2px 0 0; font-size: 12px; color: var(--cms-text-faint); }
+.media-picker__selected-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+/* ---- library browser ---- */
+.media-picker__modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(15, 23, 42, 0.45);
+}
+
+.media-picker__modal-card {
+    width: min(880px, 100%);
+    max-height: 80vh;
+    overflow: auto;
+    background: var(--cms-surface, #fff);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.media-picker__modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.media-picker__modal-title { margin: 0; font-size: 16px; font-weight: 700; }
+
+.media-picker__modal-empty { font-size: 13px; color: var(--cms-text-muted, #6b7280); }
+
+.media-picker__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+    gap: 10px;
+}
+
+.media-picker__grid-item {
+    padding: 0;
+    border: 1px solid var(--cms-border, #d7dae0);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--cms-surface-muted, #f3f4f6);
+    cursor: pointer;
+    aspect-ratio: 16 / 10;
+}
+
+.media-picker__grid-item:hover { border-color: var(--cms-accent, #7c3aed); }
+/* Keyboard users must be able to see which asset is focused. */
+.media-picker__grid-item:focus-visible { outline: 2px solid var(--cms-accent, #7c3aed); outline-offset: 2px; }
+
+.media-picker__grid-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* A library row whose file no longer loads from the image host. */
+.media-picker__grid-item--broken {
+  position: relative;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.media-picker__grid-broken {
+  position: absolute;
+  inset: auto 4px 4px;
+  padding: 2px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: rgba(180, 35, 24, 0.9);
+  border-radius: 4px;
+}

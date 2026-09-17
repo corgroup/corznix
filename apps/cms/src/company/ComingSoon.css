@@ -1,0 +1,149 @@
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  padding: 8vh var(--space-4) var(--space-6);
+}
+
+.coming-soon__hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 480px;
+  height: 220px;
+  margin-bottom: var(--space-2);
+}
+.coming-soon__ring {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  opacity: 0.6;
+}
+.coming-soon__ring::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  opacity: 0.5;
+}
+.coming-soon__float {
+  position: absolute;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--accent);
+}
+.coming-soon__float svg { width: 20px; height: 20px; }
+.coming-soon__float--top { top: 0; left: 50%; transform: translateX(-50%); }
+.coming-soon__float--left { top: 46%; left: 12%; }
+.coming-soon__float--right { top: 46%; right: 12%; }
+
+.coming-soon__mark {
+  position: relative;
+  z-index: 1;
+  display: inline-grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.coming-soon__wordmark {
+  position: relative;
+  z-index: 1;
+  width: min(320px, 80vw);
+}
+.coming-soon__wordmark svg { width: 100%; height: auto; display: block; }
+
+.coming-soon h1 { font-size: 24px; margin: 0; }
+.coming-soon p { max-width: 460px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+
+.coming-soon__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft, rgba(90, 60, 200, 0.1));
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin-top: var(--space-2);
+}
+.coming-soon__pill svg { width: 15px; height: 15px; }
+
+.coming-soon__switch { margin-top: var(--space-3); }
+.coming-soon__switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+.coming-soon__switch-btn:hover { background: var(--surface-2); }
+.coming-soon__switch-btn svg { width: 16px; height: 16px; }
+/* Portaled to document.body and positioned by useFloatingMenu — see the
+   matching comment on .company-switcher__menu. `--floating-max-height`
+   comes from Floating UI's size() middleware (real available space in
+   whichever direction it lands), so overflow scrolls inside the panel
+   instead of ever growing this page. */
+.coming-soon__switch-menu {
+  width: min(320px, 90vw);
+  max-height: var(--floating-max-height, 380px);
+  overflow-y: auto;
+  z-index: 1000;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: left;
+  animation: coming-soon-menu-in 140ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: top;
+}
+
+@keyframes coming-soon-menu-in {
+  from { opacity: 0; transform: scale(0.97) translateY(-4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coming-soon__switch-menu { animation: none; }
+}
+
+.coming-soon__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin-top: var(--space-5);
+}
+.coming-soon__rule { flex: 1; height: 1px; background: var(--border); }
+.coming-soon__footer-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint, var(--text-muted));
+  white-space: nowrap;
+}
+.coming-soon__footer-tagline { font-size: 13px; color: var(--text-muted); margin: 4px 0 0; }

@@ -1,0 +1,71 @@
+/* Orders by status — circular donut chart + legend. Never a bar. */
+.obs {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.obs__chart {
+  position: relative;
+  width: 148px;
+  aspect-ratio: 1 / 1;
+  flex: 0 0 auto;
+  justify-self: center;
+}
+.obs__donut {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate(-90deg); /* start the ring at 12 o'clock */
+}
+.obs__track { stroke: var(--cms-surface-muted); }
+.obs__arc { stroke-linecap: butt; transition: stroke-dashoffset 0.4s ease; }
+
+/* One distinct hue per status, readable on the light and dark surfaces. */
+.obs__arc--p1, .obs__dot--p1 { stroke: rgb(37, 99, 235); background: rgb(37, 99, 235); }         /* Placed: blue */
+.obs__arc--p2, .obs__dot--p2 { stroke: rgb(6, 182, 212); background: rgb(6, 182, 212); }         /* Confirmed: cyan */
+.obs__arc--p3, .obs__dot--p3 { stroke: rgb(245, 158, 11); background: rgb(245, 158, 11); }       /* Processing: amber */
+.obs__arc--p4, .obs__dot--p4 { stroke: rgb(139, 92, 246); background: rgb(139, 92, 246); }       /* unmapped status: violet */
+.obs__arc--done, .obs__dot--done { stroke: rgb(22, 163, 74); background: rgb(22, 163, 74); }     /* Completed: green */
+.obs__arc--cancelled, .obs__dot--cancelled { stroke: rgb(220, 38, 38); background: rgb(220, 38, 38); } /* Cancelled: red */
+
+.obs__center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 2px;
+  pointer-events: none;
+}
+.obs__center-value { font-size: 24px; font-weight: 700; line-height: 1; color: var(--cms-text); letter-spacing: -0.01em; }
+.obs__center-label { font-size: 10px; color: var(--cms-text-faint); }
+
+.obs__legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.obs__legend li {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
+  column-gap: 8px;
+  row-gap: 1px;
+  align-items: center;
+  font-size: 12px;
+}
+.obs__dot { width: 9px; height: 9px; border-radius: 50%; grid-row: 1 / span 2; align-self: center; }
+.obs__legend-label { grid-column: 2; grid-row: 1; color: var(--cms-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.obs__legend-count { grid-column: 3; grid-row: 1; font-weight: 600; color: var(--cms-text); }
+.obs__legend-detail { grid-column: 2 / span 2; grid-row: 2; font-size: 11px; color: var(--cms-text-faint); }
+
+@media (max-width: 520px) {
+  .obs { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .obs__chart { width: 150px; }
+  .obs__legend { width: 100%; }
+}

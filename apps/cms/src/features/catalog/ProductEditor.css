@@ -1,0 +1,283 @@
+/* Unified Product editor — single page, sticky action bar, two columns.
+   Reuses --cms-* tokens + the shared .btn / .badge-pill / .editor-form /
+   .tab-body / .data-table primitives; only editor layout lives here. */
+
+.product-editor { display: flex; flex-direction: column; gap: var(--space-4); }
+.product-editor--error { gap: var(--space-3); align-items: flex-start; }
+
+/* --- sticky action bar --------------------------------------------------- */
+.editor-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding: var(--space-3) var(--space-4);
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.editor-bar__id { display: flex; align-items: center; gap: var(--space-3); min-width: 0; }
+.editor-bar__back {
+  border: 1px solid var(--cms-border-strong);
+  background: var(--cms-surface);
+  border-radius: var(--radius-sm);
+  width: 32px; height: 32px;
+  font-size: 15px; cursor: pointer; color: var(--cms-text);
+  flex: 0 0 auto;
+}
+.editor-bar__back:hover { background: var(--cms-surface-muted); }
+.editor-bar__crumb { margin: 0 0 3px; font-size: 12px; color: var(--cms-text-faint); }
+.editor-bar__crumb a { color: var(--cms-text-muted); }
+.editor-bar__name { margin: 0; font-size: 17px; line-height: 1.2; display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+.editor-bar__sub { margin: 3px 0 0; display: flex; align-items: center; gap: var(--space-2); font-size: 12px; flex-wrap: wrap; }
+
+/* two stacked sub-forms inside one section card */
+.stacked-forms { display: flex; flex-direction: column; gap: var(--space-5); }
+.stacked-forms > * { min-width: 0; }
+.stacked-forms > * + * { padding-top: var(--space-4); border-top: 1px solid var(--cms-border); }
+.editor-bar__actions { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+.editor-bar__dirty { font-size: 12px; color: var(--warning); font-weight: 600; }
+
+.editor-bar .btn.is-disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+
+/* --- step navigator --------------------------------------------------- */
+.step-nav {
+  display: flex;
+  gap: var(--space-1);
+  padding: 6px;
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+.step-nav__item {
+  display: flex; align-items: center; gap: 8px;
+  flex: 1 1 0; min-width: max-content;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: none;
+  font: inherit; font-size: 12px; font-weight: 600;
+  color: var(--cms-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.step-nav__item:hover { background: var(--cms-surface-muted); }
+.step-nav__item--current {
+  background: var(--cms-primary-soft); color: var(--cms-primary); border-color: var(--cms-primary);
+}
+.step-nav__item--done { color: var(--cms-text); }
+.step-nav__num {
+  display: grid; place-items: center;
+  width: 20px; height: 20px; border-radius: 50%;
+  font-size: 11px; font-weight: 700;
+  background: var(--cms-surface-muted); color: var(--cms-text-muted);
+}
+.step-nav__num--done { background: var(--success-soft); color: var(--success); }
+.step-nav__num--current { background: var(--cms-primary); color: var(--cms-primary-contrast); }
+
+/* --- locked section (create flow, before a draft exists) -------------- */
+.locked-section {
+  display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px dashed var(--cms-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--cms-surface-muted);
+  font-size: 13px; color: var(--cms-text-muted);
+}
+
+/* --- quick overview (rail) ----------------------------------------- */
+.quick-overview { display: flex; gap: var(--space-3); }
+.quick-overview__media {
+  width: 72px; height: 72px; flex: 0 0 auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--cms-border);
+  background: var(--cms-surface-muted);
+  display: grid; place-items: center; overflow: hidden;
+}
+.quick-overview__media img { width: 100%; height: 100%; object-fit: cover; }
+.quick-overview__media-empty { color: var(--cms-text-faint); font-size: 18px; }
+.quick-overview__body { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.quick-overview__name { margin: 0; font-size: 13px; font-weight: 600; color: var(--cms-text); }
+.quick-overview__meta { margin: 0; font-size: 11px; color: var(--cms-text-faint); }
+.quick-overview__desc {
+  margin: 2px 0 0; font-size: 11px; color: var(--cms-text-muted);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.quick-overview__stats { display: flex; gap: 10px; margin-top: 4px; font-size: 11px; color: var(--cms-text-muted); }
+.quick-overview__price { margin: 4px 0 0; font-size: 13px; font-weight: 700; color: var(--cms-text); }
+.quick-overview__ship { margin: 2px 0 0; font-size: 11px; color: var(--warning); }
+.quick-overview__ship.is-ready { color: var(--success); }
+
+/* --- readiness card extras ---------------------------------------- */
+.readiness__progress-label { margin: 2px 0 4px; font-size: 12px; color: var(--cms-text-muted); }
+.readiness__bar { height: 6px; border-radius: 999px; background: var(--cms-surface-muted); overflow: hidden; }
+.readiness__bar > span { display: block; height: 100%; background: var(--cms-primary); transition: width 0.3s ease; }
+/* Each checklist item jumps to its section: a real 28px target, pulled back by
+   its own padding so the list keeps its alignment. It was an 18px text row. */
+.readiness__label {
+  display: flex; align-items: center; gap: 7px;
+  min-height: 28px; margin: -4px -6px; padding: 4px 6px; border-radius: 6px;
+  background: none; border: none; font: inherit; font-size: 13px;
+  color: var(--cms-text); cursor: pointer; text-align: left;
+}
+.readiness__label:hover { color: var(--cms-primary); background: var(--cms-primary-soft); }
+.readiness__tick { width: 8px; height: 8px; border-radius: 50%; flex: 0 0 auto; }
+.readiness__tick--good { background: var(--success); }
+.readiness__tick--warn { background: var(--warning); }
+.readiness__tick--muted { background: var(--cms-border-strong); }
+
+/* --- SKU identity + variant builder ------------------------------ */
+.sku-identity { display: flex; flex-direction: column; gap: var(--space-2); padding-bottom: var(--space-3); border-bottom: 1px solid var(--cms-border); margin-bottom: var(--space-3); }
+.sku-identity__prefix { margin: 4px 0 0; font-size: 12px; }
+.sku-identity__prefix code { font-size: 13px; font-weight: 700; }
+.code-select { display: flex; flex-direction: column; gap: 4px; }
+.code-select .tab-body__hint { margin: 0; }
+.code-select__new {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 10px; margin-top: 4px;
+  border: 1px dashed var(--cms-border-strong); border-radius: var(--radius-sm);
+  background: var(--cms-surface-muted);
+}
+
+.size-multi-add { margin-top: var(--space-3); display: flex; flex-direction: column; gap: 8px; }
+.size-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.size-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 999px;
+  border: 1px solid var(--cms-border-strong);
+  font-size: 12px; font-weight: 600; cursor: pointer;
+  background: var(--cms-surface); color: var(--cms-text-muted);
+}
+.size-chip input { margin: 0; }
+.size-chip.is-on { background: var(--cms-primary-soft); border-color: var(--cms-primary); color: var(--cms-primary); }
+
+.sku-row__actions { display: flex; gap: 10px; align-items: center; justify-content: flex-end; white-space: nowrap; }
+/* Nested SKU table scrolls inside its own box instead of being clipped by the card. */
+.table-wrap--nested { margin: 8px 0 4px; border-radius: var(--radius-sm); }
+.table-wrap--nested .data-table--nested { margin: 0; border: 0; border-radius: 0; }
+
+/* --- setup / review section ------------------------------------- */
+.setup-review { display: flex; flex-direction: column; gap: var(--space-3); }
+.readiness-block .readiness__progress-label { margin-top: 0; }
+.setup-review__actions { display: flex; gap: var(--space-2); }
+
+/* --- publish gate dialog ----------------------------------------- */
+.publish-gate__list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.publish-gate__list li { display: flex; justify-content: space-between; gap: var(--space-3); font-size: 13px; }
+
+/* --- two-column grid --------------------------------------------------- */
+.editor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: var(--space-4);
+  align-items: start;
+}
+.editor-grid__main { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.editor-grid__rail {
+  position: sticky;
+  top: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* --- section cards (prefixed `editor-card` — the dashboard owns
+       `.section-card` in the global stylesheet; the two must not collide) --- */
+.editor-card {
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  scroll-margin-top: 88px;
+}
+.editor-card__head {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-3);
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--cms-border);
+}
+.editor-card__title { margin: 0; font-size: 14px; }
+.editor-card__desc { margin: 3px 0 0; font-size: 12px; color: var(--cms-text-muted); }
+.editor-card__body { padding: var(--space-4); }
+.editor-card__body .editor-form { max-width: none; }
+.editor-card__status {
+  flex: 0 0 auto;
+  font-size: 11px; font-weight: 600;
+  padding: 2px 8px; border-radius: 999px;
+}
+.editor-card__status--good { background: var(--success-soft); color: var(--success); }
+.editor-card__status--warn { background: var(--warning-soft); color: var(--warning); }
+.editor-card__status--muted { background: var(--cms-surface-muted); color: var(--cms-text-muted); }
+
+/* --- rail cards --------------------------------------------------- */
+.rail-card {
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+  display: flex; flex-direction: column; gap: var(--space-2);
+}
+.rail-card__title {
+  margin: 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--cms-text-faint);
+  display: flex; align-items: center; gap: var(--space-2); justify-content: space-between;
+}
+.rail-card__value { margin: 0; font-size: 13px; }
+.rail-card__value--warn { color: var(--warning); }
+.rail-card__pill { font-size: 11px; padding: 1px 7px; border-radius: 999px; }
+.rail-card__pill--warn { background: var(--warning-soft); color: var(--warning); }
+
+.rail-facts { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.rail-facts > div { display: flex; justify-content: space-between; gap: var(--space-3); font-size: 12px; }
+.rail-facts dt { color: var(--cms-text-muted); margin: 0; }
+.rail-facts dd { margin: 0; text-align: right; font-weight: 500; }
+
+.readiness { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.readiness__row {
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-2);
+  padding: 6px 0; font-size: 12px; border-bottom: 1px solid var(--cms-border);
+}
+.readiness__row:last-child { border-bottom: 0; }
+.readiness__label { color: var(--cms-text); text-decoration: none; }
+.readiness__label:hover { color: var(--cms-primary); text-decoration: underline; }
+.readiness__state { text-align: right; }
+.readiness__state--good { color: var(--success); }
+.readiness__state--warn { color: var(--warning); font-weight: 600; }
+.readiness__state--muted { color: var(--cms-text-faint); }
+
+/* --- SEO preview --------------------------------------------------- */
+.seo-preview {
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  background: var(--cms-surface-muted);
+  margin-top: var(--space-2);
+}
+.seo-preview__url { margin: 0; font-size: 12px; color: var(--success); word-break: break-all; }
+.seo-preview__title { margin: 2px 0 0; font-size: 15px; color: #1a0dab; }
+.seo-preview__desc { margin: 2px 0 0; font-size: 12px; color: var(--cms-text-muted); }
+.seo-preview__counts { margin-top: 6px; display: flex; gap: var(--space-3); font-size: 11px; color: var(--cms-text-faint); }
+.seo-preview__counts .is-over { color: var(--danger); font-weight: 600; }
+
+@media (max-width: 1080px) {
+  .editor-grid { grid-template-columns: minmax(0, 1fr); }
+  .editor-grid__rail { position: static; }
+}
+@media (max-width: 720px) {
+  .step-nav__label { display: none; }
+  .step-nav__item { flex: 0 0 auto; }
+}
+
+/* Pricing tab — the one price that is not per-SKU (shown before a size is
+   chosen), so it sits above the SKU table rather than inside it. */
+.standard-price { margin-bottom: var(--space-4); }
+.standard-price__body { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.standard-price__body .cell-input { max-width: 180px; }

@@ -1,0 +1,50 @@
+/* Homepage builder — shares the Header builder's layout and controls
+   (../header/HeaderBuilder.css); only what is new to this screen lives here. */
+
+.hp-add { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
+.hp-add__label { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+
+.hp-list-row {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px; align-items: start;
+  padding: 8px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface);
+}
+.hp-list-row__fields { min-width: 0; }
+.hp-list-row .hb-field { margin: 0; }
+
+.hp-trust-row { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 8px; }
+.hp-trust-row > :last-child { grid-column: 1 / -1; }
+@media (max-width: 640px) {
+  .hp-trust-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+.hp-range { width: 100%; accent-color: var(--accent); }
+
+/* Instagram section: the connected account, picks and the synced posts to choose from. */
+.hp-ig-account { display: grid; gap: 6px; justify-items: start; padding: 10px 12px; font-size: 12.5px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+.hp-ig-account p { margin: 0; }
+.hp-ig-account--warn { background: var(--warn-bg); color: var(--warn-fg); border-color: transparent; }
+.hp-ig-account--warn a { color: inherit; text-decoration: underline; }
+
+.hp-ig-thumb { display: block; width: 48px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius-sm); background: var(--border); }
+.hp-ig-thumb--empty { display: flex; align-items: center; justify-content: center; font-size: 9px; text-align: center; color: var(--text-muted); }
+
+.hp-ig-strip { display: flex; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; overflow-x: auto; }
+.hp-ig-strip .hp-ig-thumb { width: 56px; }
+
+.hb-grid__full > .hb-rows + .hb-rows { margin-top: 14px; }
+.hp-ig-pick { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+.hp-ig-pick__text { display: grid; gap: 2px; min-width: 0; }
+.hp-ig-pick__caption { overflow: hidden; font-size: 13px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.hp-ig-pick .hb-field__hint { margin: 0; }
+@media (max-width: 640px) {
+  .hp-ig-pick { grid-template-columns: auto minmax(0, 1fr); }
+  .hp-ig-pick > :last-child { grid-column: 1 / -1; }
+}
+
+.hp-ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+.hp-ig-grid__item { display: grid; gap: 4px; width: 100%; padding: 4px; font: inherit; text-align: left; color: inherit; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; }
+.hp-ig-grid__item .hp-ig-thumb { width: 100%; }
+.hp-ig-grid__item:hover:not(:disabled) { border-color: var(--accent); }
+.hp-ig-grid__item:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.hp-ig-grid__item:disabled { opacity: 0.5; cursor: not-allowed; }
+.hp-ig-grid__meta { overflow: hidden; font-size: 10.5px; color: var(--text-muted); text-overflow: ellipsis; white-space: nowrap; }

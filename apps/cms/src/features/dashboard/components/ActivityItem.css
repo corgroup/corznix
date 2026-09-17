@@ -1,0 +1,21 @@
+.activity-list { display: flex; flex-direction: column; }
+
+.activity-item {
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: 9px 6px; border-bottom: 1px solid var(--cms-border); color: inherit;
+}
+.activity-item:last-child { border-bottom: none; }
+.activity-item--link:hover { text-decoration: none; background: var(--cms-surface-muted); }
+.activity-item--link:hover .activity-item__title { color: var(--cms-primary); }
+.activity-item:focus-visible { outline: 2px solid var(--cms-primary); outline-offset: -2px; }
+
+.activity-item__icon {
+  width: 28px; height: 28px; flex-shrink: 0; border-radius: 7px;
+  background: var(--cms-primary-soft); color: var(--cms-primary);
+  display: grid; place-items: center;
+}
+.activity-item__icon svg { width: 15px; height: 15px; }
+.activity-item__body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.activity-item__title { font-size: 13px; font-weight: 600; color: var(--cms-text); }
+.activity-item__meta { font-size: 12px; color: var(--cms-text-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.activity-item__time { font-size: 11px; color: var(--cms-text-faint); white-space: nowrap; flex-shrink: 0; }

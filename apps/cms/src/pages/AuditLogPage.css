@@ -1,0 +1,4 @@
+/* Audit Log toolbar: search takes the spare width, filters keep a readable
+   minimum and wrap onto the next line instead of widening the page. */
+.audit-filter { flex: 1 1 180px; min-width: 160px; max-width: 240px; }
+.audit-filter--date { flex: 0 1 160px; min-width: 140px; }

@@ -1,0 +1,53 @@
+{
+  "_comment": "Wave 8E Phase 6 DEFAULT themes + the production Diwali Festive Sale campaign (2026-09-04: promoted from the original placeholder test campaign to real seasonal copy, paired with the 'Diwali Festive Sale — 20% Off' AUTOMATIC promotion created by seed-sale-diwali-campaigns.js). seed-content-campaigns.js backfills content_themes / content_campaigns and publishes v1+ of each (idempotent, §115) — this file is the CANONICAL source for the Diwali campaign; edit it here, not ad hoc, or a re-seed will revert the change. The 'base' theme is is_default and equals the storefront's current look (no visible change). The Diwali campaign window is set well ahead of the current date, so it is PUBLISHED-but-dormant — the resolver returns the base experience until the window opens.",
+  "themes": [
+    {
+      "themeKey": "base",
+      "name": "CORCOTTON Base",
+      "isDefault": true,
+      "tokens": {
+        "announcementBg": "#000000",
+        "announcementFg": "#ffffff",
+        "accent": "#000000",
+        "accentContrast": "#ffffff",
+        "bannerBg": "#111111",
+        "bannerFg": "#ffffff"
+      }
+    },
+    {
+      "themeKey": "diwali",
+      "name": "Diwali Festive",
+      "isDefault": false,
+      "tokens": {
+        "announcementBg": "#5a1a1a",
+        "announcementFg": "#f4c430",
+        "accent": "#b8860b",
+        "accentContrast": "#1a1109",
+        "bannerBg": "#3a0f0f",
+        "bannerFg": "#f4c430"
+      }
+    }
+  ],
+  "campaigns": [
+    {
+      "campaignKey": "diwali_test",
+      "slug": "diwali-test",
+      "name": "Diwali Festive Sale 2026",
+      "priority": 100,
+      "startsAt": "2026-10-26T00:00:00.000Z",
+      "endsAt": "2026-11-13T00:00:00.000Z",
+      "themeKey": "diwali",
+      "payload": {
+        "announcementMode": "prepend",
+        "announcements": [
+          { "text": "Diwali Festive Sale — 20% off everything, automatically applied", "link": "/collections/new-arrivals" }
+        ],
+        "banner": {
+          "text": "Celebrate Diwali with 20% off your entire order",
+          "ctaLabel": "Shop the edit",
+          "ctaPath": "/collections/new-arrivals"
+        }
+      }
+    }
+  ]
+}

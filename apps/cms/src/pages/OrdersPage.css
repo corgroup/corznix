@@ -1,0 +1,191 @@
+/* Orders workbench.
+ *
+ * Same CMS design system — purple accent, same tokens, same table. What
+ * changed is density and hierarchy: summary, tabs, one filter row, then the
+ * table gets the rest of the page. The old right-hand rail is gone; its two
+ * useful numbers moved into the summary strip, where they are not competing
+ * with the orders themselves for horizontal space. */
+
+/* ---- summary ---------------------------------------------------------- */
+.ord-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-3);
+  margin-block-end: var(--space-4);
+}
+
+.ord-sum {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  display: grid;
+  gap: 2px;
+  text-align: start;
+  font: inherit;
+  min-inline-size: 0;
+}
+
+.ord-sum__value { font-size: 22px; font-weight: 650; color: var(--text); line-height: 1.1; }
+.ord-sum__label { font-size: 11.5px; color: var(--text-muted); }
+
+.ord-sum--action { cursor: pointer; border-color: var(--border-strong); }
+.ord-sum--action:hover { border-color: var(--accent); }
+.ord-sum--action .ord-sum__value { color: var(--accent); }
+.ord-sum--action.is-active { background: var(--accent-soft); border-color: var(--accent); }
+
+/* ---- workflow tabs ---------------------------------------------------- */
+.ord-tabs {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  border-block-end: 1px solid var(--border);
+  margin-block-end: var(--space-3);
+  scrollbar-width: thin;
+}
+
+.ord-tab {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  border-block-end: 2px solid transparent;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-block-end: -1px;
+}
+
+.ord-tab:hover { color: var(--text); }
+
+.ord-tab.is-active {
+  color: var(--accent);
+  border-block-end-color: var(--accent);
+  font-weight: 600;
+}
+
+.ord-tab__count {
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.ord-tab.is-active .ord-tab__count { background: var(--accent-soft); color: var(--accent); }
+
+/* ---- filters — one compact row ---------------------------------------- */
+.ord-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-block-end: var(--space-3);
+}
+
+.ord-filters__count { margin-inline-start: auto; font-size: 12px; color: var(--text-faint); }
+
+.ord-search {
+  position: relative;
+  flex: 1 1 260px;
+  max-inline-size: 380px;
+}
+
+.ord-search__icon {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 10px;
+  transform: translateY(-50%);
+  color: var(--text-faint);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.ord-search input { inline-size: 100%; padding-left: 34px; }
+
+/* One date control, not two naked inputs. */
+.ord-daterange { position: relative; }
+
+.ord-daterange__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font: inherit;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.ord-daterange__button:hover { border-color: var(--accent); }
+.ord-daterange__icon { color: var(--text-faint); }
+
+.ord-daterange__pop {
+  position: absolute;
+  z-index: 20;
+  inset-block-start: calc(100% + 4px);
+  inset-inline-start: 0;
+  min-inline-size: 260px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-3);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.ord-daterange__presets { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+
+.ord-daterange__presets button {
+  min-height: var(--control-h-sm);
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font: inherit;
+  font-size: var(--control-font-sm);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.ord-daterange__presets button:hover { border-color: var(--accent); color: var(--accent); }
+.ord-daterange__custom { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); }
+
+.ord-daterange__clear {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: underline;
+  cursor: pointer;
+  justify-self: start;
+}
+
+/* ---- table ------------------------------------------------------------ */
+.ord-table td { vertical-align: middle; }
+.ord-cod { color: var(--warn-fg); font-weight: 600; }
+
+/* The routine next step, right in the row. Secondary weight — it is one of
+ * many on screen, unlike the single primary action on the detail page. */
+.ord-next { white-space: nowrap; }
+
+.ord-next-link { font-size: 12.5px; color: var(--accent); white-space: nowrap; }
+
+@media (max-width: 720px) {
+  .ord-filters { flex-direction: column; align-items: stretch; }
+  .ord-filters__count { margin-inline-start: 0; }
+  .ord-search { max-inline-size: none; }
+  .ord-daterange__pop { inset-inline-start: auto; inset-inline-end: 0; }
+}

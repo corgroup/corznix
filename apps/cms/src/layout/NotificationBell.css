@@ -1,0 +1,152 @@
+.notif { position: relative; flex: 0 0 auto; }
+.notif__btn { position: relative; }
+
+.notif__badge {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--danger, #dc2626);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  border: 2px solid var(--cms-surface);
+}
+
+.notif__panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 360px;
+  max-width: calc(100vw - 24px);
+  background: var(--cms-surface);
+  border: 1px solid var(--cms-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  z-index: 30;
+}
+
+.notif__head,
+.notif__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+}
+.notif__head { border-bottom: 1px solid var(--cms-border); }
+.notif__foot { border-top: 1px solid var(--cms-border); }
+.notif__title { font-size: 13px; font-weight: 700; color: var(--cms-text); }
+.notif__link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cms-primary);
+  cursor: pointer;
+}
+.notif__link:hover { text-decoration: underline; }
+
+.notif__head-actions { display: inline-flex; align-items: center; gap: 12px; }
+.notif__sound {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: -3px -5px;
+  padding: 3px 5px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cms-text-muted);
+  cursor: pointer;
+}
+.notif__sound svg { width: 14px; height: 14px; flex: 0 0 auto; }
+.notif__sound[aria-pressed="true"] { color: var(--cms-primary); }
+.notif__sound:hover { background: var(--cms-surface-muted); }
+.notif__sound:focus-visible,
+.notif__link:focus-visible { outline: 2px solid var(--cms-primary); outline-offset: 2px; }
+
+.notif__list { max-height: 380px; overflow-y: auto; }
+.notif__empty { margin: 0; padding: 28px 16px; text-align: center; font-size: 13px; color: var(--cms-text-faint); }
+
+.notif__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 12px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--cms-border);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.notif__item:last-child { border-bottom: none; }
+.notif__item:hover { background: var(--cms-surface-muted); }
+.notif__item--unread { background: color-mix(in srgb, var(--cms-primary) 6%, var(--cms-surface)); }
+
+.notif__icon {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--cms-surface-muted);
+  color: var(--cms-text-muted);
+}
+.notif__icon svg { width: 16px; height: 16px; }
+.notif__icon--warning { background: var(--warning-soft, #fef3c7); color: var(--warning, #b45309); }
+.notif__icon--critical { background: var(--danger-soft, #fee2e2); color: var(--danger, #dc2626); }
+
+.notif__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.notif__item-title { font-size: 13px; font-weight: 600; color: var(--cms-text); }
+.notif__item-detail {
+  font-size: 12px;
+  color: var(--cms-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.notif__item-time { font-size: 11px; color: var(--cms-text-faint); margin-top: 1px; }
+
+.notif__dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cms-primary);
+  margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+  .notif__panel { width: 320px; }
+}
+
+/* On a phone the bell sits mid-topbar, so a panel hung from its right edge ran
+   off the left of the screen (left: -79px at 375px wide). Pin it between the
+   screen edges just below the topbar instead. */
+@media (max-width: 600px) {
+  .notif__panel {
+    position: fixed;
+    top: calc(var(--topbar-h) + 6px);
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+  }
+  .notif__list { max-height: min(380px, calc(100vh - var(--topbar-h) - 120px)); }
+}

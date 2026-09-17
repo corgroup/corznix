@@ -1,0 +1,196 @@
+{
+  "_comment": "Canonical DEFAULT storefront experience for Wave 8E. Transcribed verbatim from apps/corcotton/src/features/header/fixtures/*.fixture.js and pages/Home.jsx. Icon components are represented as stable names (assets/icons). This file is the single source the content backfill (migration 026 companion seed) and verify:content:baseline both read — no other place re-encodes the default.",
+  "navigation": {
+    "menuKey": "primary",
+    "items": [
+      { "key": "nav_tops", "label": "TOPS", "linkType": "COLLECTION", "target": "tops", "route": "/collections/tops", "megaMenuKey": "mega_tops", "position": 0, "icon": "shirt" },
+      { "key": "nav_bottoms", "label": "BOTTOMS", "linkType": "COLLECTION", "target": "bottoms", "route": "/collections/bottoms", "megaMenuKey": "mega_bottoms", "position": 1, "icon": "pants" },
+      { "key": "nav_accessories", "label": "ACCESSORIES", "linkType": "COLLECTION", "target": "accessories", "route": "/collections/accessories", "megaMenuKey": "mega_accessories", "position": 2, "icon": "bag-handle" },
+      { "key": "nav_new_in", "label": "NEW IN", "linkType": "COLLECTION", "target": "new-arrivals", "route": "/collections/new-arrivals", "megaMenuKey": "mega_new_in", "position": 3, "icon": "sparkles" }
+    ],
+    "mobileMenu": {
+      "mobileLinks": [
+        { "label": "About Us", "path": "/pages/our-story" },
+        { "label": "Size Guide", "path": "/size-guide" },
+        { "label": "Help & Support", "path": "/help" },
+        { "label": "Shipping & Returns", "path": "/pages/shipping" },
+        { "label": "Contact Us", "path": "/pages/contact" }
+      ],
+      "mobileTagline": "Built on purpose."
+    }
+  },
+  "megaMenus": [
+    {
+      "key": "mega_tops",
+      "featured": { "heading": "TOPS", "tagline": "Built for every season.\nDesigned to endure.", "ctaLabel": "VIEW ALL TOPS", "ctaPath": "/collections/tops", "background": "linear-gradient(160deg, #2c2c2c, #050505)" },
+      "categoryNav": { "icon": "shirt", "items": [
+        { "label": "All Tops", "desc": "View all", "path": "/collections/tops", "isViewAll": true },
+        { "label": "T-Shirts", "desc": "Everyday essentials", "path": "/collections/tshirts" },
+        { "label": "Polos", "desc": "Clean. Classic. Effortless.", "path": "/collections/polos" },
+        { "label": "Shirts", "desc": "Sharp by design", "path": "/collections/shirts" },
+        { "label": "Sweatshirts", "desc": "Comfort that lasts", "path": "/collections/sweatshirts" },
+        { "label": "Hoodies", "desc": "Layer. Endure. Repeat.", "path": "/collections/hoodies" }
+      ] },
+      "shopTitle": "SHOP TOPS",
+      "shopCards": [
+        { "label": "T-Shirts", "path": "/collections/tshirts", "background": "linear-gradient(to bottom, #ECE9E4, #D8D3CB)" },
+        { "label": "Polos", "path": "/collections/polos", "background": "linear-gradient(to bottom, #E7E3DC, #D2CCC1)" },
+        { "label": "Shirts", "path": "/collections/shirts", "background": "linear-gradient(to bottom, #DEDAD2, #C6BFB2)" },
+        { "label": "Sweatshirts", "path": "/collections/sweatshirts", "background": "linear-gradient(to bottom, #EFEEEC, #DAD7D1)" },
+        { "label": "Hoodies", "path": "/collections/hoodies", "background": "linear-gradient(to bottom, #E3E1DD, #C9C5BD)" }
+      ],
+      "mobileLinks": [
+        { "label": "All Tops", "path": "/collections/tops" },
+        { "label": "T-Shirts", "path": "/collections/tshirts" },
+        { "label": "Polos", "path": "/collections/polos" },
+        { "label": "Shirts", "path": "/collections/shirts" },
+        { "label": "Sweatshirts", "path": "/collections/sweatshirts" },
+        { "label": "Hoodies", "path": "/collections/hoodies" }
+      ]
+    },
+    {
+      "key": "mega_bottoms",
+      "featured": { "heading": "BOTTOMS", "tagline": "Built for movement.\nMade to endure.", "ctaLabel": "VIEW ALL BOTTOMS", "ctaPath": "/collections/bottoms", "background": "linear-gradient(160deg, #3a3a3a, #0a0a0a)" },
+      "categoryNav": { "icon": "pants", "items": [
+        { "label": "All Bottoms", "desc": "View all", "path": "/collections/bottoms", "isViewAll": true },
+        { "label": "Cargo Pants", "desc": "Utility. Function. Style.", "path": "/collections/cargo-pants" },
+        { "label": "Joggers", "desc": "Comfort that moves.", "path": "/collections/joggers" },
+        { "label": "Trousers", "desc": "Sharp. Timeless. Essential.", "path": "/collections/trousers" },
+        { "label": "Shorts", "desc": "Easy. Everyday. Effortless.", "path": "/collections/shorts" },
+        { "label": "Sweatpants", "desc": "Soft. Relaxed. Reliable.", "path": "/collections/sweatpants" }
+      ] },
+      "shopTitle": "SHOP BY CATEGORY",
+      "shopCards": [
+        { "label": "Cargo Pants", "path": "/collections/cargo-pants", "background": "linear-gradient(to bottom, #3a3a3a, #1a1a1a)" },
+        { "label": "Joggers", "path": "/collections/joggers", "background": "linear-gradient(to bottom, #EDEAE4, #D6D0C6)" },
+        { "label": "Trousers", "path": "/collections/trousers", "background": "linear-gradient(to bottom, #2b2b2b, #101010)" },
+        { "label": "Shorts", "path": "/collections/shorts", "background": "linear-gradient(to bottom, #DEDAD2, #C2BCAF)" },
+        { "label": "Sweatpants", "path": "/collections/sweatpants", "background": "linear-gradient(to bottom, #E9E6E0, #D0CBC0)" }
+      ],
+      "fits": [
+        { "label": "Relaxed Fit", "path": "/collections/bottoms?fit=relaxed-fit" },
+        { "label": "Tapered Fit", "path": "/collections/bottoms?fit=tapered-fit" },
+        { "label": "Straight Fit", "path": "/collections/bottoms?fit=straight-fit" },
+        { "label": "Wide Leg", "path": "/collections/bottoms?fit=wide-leg" }
+      ],
+      "fitsViewAllPath": "/collections/bottoms",
+      "fitsViewAllLabel": "VIEW ALL BOTTOMS",
+      "mobileLinks": [
+        { "label": "All Bottoms", "path": "/collections/bottoms" },
+        { "label": "Trousers", "path": "/collections/trousers" },
+        { "label": "Joggers", "path": "/collections/joggers" },
+        { "label": "Shorts", "path": "/collections/shorts" }
+      ]
+    },
+    {
+      "key": "mega_accessories",
+      "featured": { "heading": "ACCESSORIES", "tagline": "The details that\ncomplete the purpose.", "ctaLabel": "EXPLORE ALL ACCESSORIES", "ctaPath": "/collections/accessories", "background": "linear-gradient(160deg, #2c2c2c, #050505)" },
+      "categoryNav": { "icon": "bag-handle", "items": [
+        { "label": "All Accessories", "desc": "View all", "path": "/collections/accessories", "isViewAll": true },
+        { "label": "Headwear", "desc": "Caps. Beanies. Hats.", "path": "/collections/caps" },
+        { "label": "Bags", "desc": "Tote Bags. Sling Bags.", "path": "/collections/bags" },
+        { "label": "Socks", "desc": "Everyday Essentials.", "path": "/collections/socks" },
+        { "label": "Other Accessories", "desc": "Belts. Keychains. More.", "path": "/collections/other-accessories" }
+      ] },
+      "shopTitle": "SHOP BY CATEGORY",
+      "shopCards": [
+        { "label": "Caps", "path": "/collections/caps", "background": "linear-gradient(to bottom, #2b2b2b, #0d0d0d)" },
+        { "label": "Bags", "path": "/collections/bags", "background": "linear-gradient(to bottom, #2b2b2b, #0d0d0d)" },
+        { "label": "Socks", "path": "/collections/socks", "background": "linear-gradient(to bottom, #DEDAD2, #C2BCAF)" },
+        { "label": "Other Accessories", "path": "/collections/other-accessories", "background": "linear-gradient(to bottom, #2b2b2b, #0d0d0d)" }
+      ],
+      "mobileLinks": [
+        { "label": "All Accessories", "path": "/collections/accessories" },
+        { "label": "Caps", "path": "/collections/caps" },
+        { "label": "Bags", "path": "/collections/bags" },
+        { "label": "Socks", "path": "/collections/socks" }
+      ]
+    },
+    {
+      "key": "mega_new_in",
+      "featured": { "heading": "NEW IN", "tagline": "Fresh drops.\nBuilt to stand out.", "ctaLabel": "SHOP ALL NEW IN", "ctaPath": "/collections/new-arrivals", "background": "linear-gradient(160deg, #3a3a3a, #0a0a0a)" },
+      "categoryNav": { "icon": "sparkles", "items": [
+        { "label": "All New In", "desc": "View all", "path": "/collections/new-arrivals", "isViewAll": true },
+        { "label": "New Arrivals", "desc": "Latest drops", "path": "/collections/new-arrivals" },
+        { "label": "T-Shirts", "desc": "New styles", "path": "/collections/tshirts" },
+        { "label": "Sweatshirts", "desc": "New in collection", "path": "/collections/sweatshirts" },
+        { "label": "Bottoms", "desc": "New styles", "path": "/collections/bottoms" }
+      ] },
+      "latestDrops": true,
+      "infoCards": [
+        { "icon": "sparkles", "title": "New Styles", "desc": "Fresh designs,\nevery week." },
+        { "icon": "calendar", "title": "Early Access", "desc": "Be the first to\nget the drops." },
+        { "icon": "trending-up", "title": "Limited Stock", "desc": "Once it's gone,\nit's gone." }
+      ],
+      "mobileLinks": [
+        { "label": "All New Arrivals", "path": "/collections/new-arrivals" }
+      ]
+    }
+  ],
+  "announcements": {
+    "dismissVersion": "v1",
+    "settings": { "autoplaySeconds": 4, "showClock": true, "dismissible": true },
+    "slides": [
+      { "key": "ann_free_shipping", "text": "Free shipping on all orders" },
+      { "key": "ann_luxury_essentials", "text": "Luxury Essentials · Premium Quality" }
+    ]
+  },
+  "footer": {
+    "groups": {
+      "shop": [
+        { "label": "New In", "path": "/collections/new-arrivals" },
+        { "label": "Bestsellers", "path": "/bestsellers" },
+        { "label": "Tops", "path": "/collections/tops" },
+        { "label": "Bottoms", "path": "/collections/bottoms" },
+        { "label": "Accessories", "path": "/collections/accessories" }
+      ],
+      "about": [
+        { "label": "Our Story", "path": "/pages/our-story" },
+        { "label": "Sustainability", "path": "/pages/sustainability" },
+        { "label": "Craftsmanship", "path": "/pages/craftsmanship" },
+        { "label": "Journal", "path": "/blog" },
+        { "label": "Careers", "path": "/careers" },
+        { "label": "Press", "path": "/pages/press" }
+      ],
+      "help": [
+        { "label": "FAQs", "path": "/pages/faqs" },
+        { "label": "Shipping & Delivery", "path": "/pages/shipping" },
+        { "label": "Returns & Exchanges", "path": "/pages/returns" },
+        { "label": "Size Guide", "path": "/pages/size-guide" },
+        { "label": "Care Guide", "path": "/pages/care-guide" },
+        { "label": "Track Your Order", "path": "/track-order" },
+        { "label": "Contact Us", "path": "/pages/contact" }
+      ],
+      "legal": [
+        { "label": "Privacy Policy", "path": "/pages/privacy-policy" },
+        { "label": "Terms of Use", "path": "/pages/terms" },
+        { "label": "Refund Policy", "path": "/pages/refund-policy" }
+      ]
+    },
+    "contact": { "email": "support@corcotton.in", "phone": "+91 5493358300", "phoneHref": "tel:+915493358300", "location": "Uttar Pradesh, India" },
+    "socials": [
+      { "label": "Instagram", "href": "https://www.instagram.com/corcotton.in/", "icon": "instagram" },
+      { "label": "Facebook", "href": "https://www.facebook.com/Corcotton.in/", "icon": "facebook" },
+      { "label": "Pinterest", "href": "https://in.pinterest.com/corcottonin/", "icon": "pinterest" },
+      { "label": "YouTube", "href": "https://www.youtube.com/@Corcotton", "icon": "youtube" }
+    ]
+  },
+  "homepage": {
+    "sectionKey": "home",
+    "sections": [
+      { "key": "hero", "type": "HERO", "position": 0, "enabled": true, "config": {} },
+      { "key": "brand_strip", "type": "BRAND_STRIP", "position": 1, "enabled": true, "config": { "phrases": ["CORCOTTON™", "BUILT ON PURPOSE", "MADE TO ENDURE", "SUBTLE. NATURAL. TIMELESS."] } },
+      { "key": "latest_drop", "type": "PRODUCT_CAROUSEL", "position": 2, "enabled": true, "config": { "collectionSlug": "new-arrivals", "eyebrow": "The First Release", "heading": "The Latest Drop" } },
+      { "key": "category_section", "type": "CATEGORY_SECTION", "position": 3, "enabled": true, "config": { "menuKey": "primary", "heading": "Shop by Collection" } },
+      { "key": "best_sellers", "type": "PRODUCT_CAROUSEL", "position": 4, "enabled": true, "config": { "collectionSlug": "bestsellers", "eyebrow": "Bestsellers", "heading": "Bestsellers", "description": "Most loved pieces by our community." } },
+      { "key": "brand_banner", "type": "EDITORIAL_BANNER", "position": 5, "enabled": true, "config": { "eyebrow": "Our Philosophy", "heading": "Built on Purpose", "body": "We don't chase trends. We build with purpose. Every piece is a reminder to endure, to move forward, and to stay true to who you are.", "ctaLabel": "Read Our Story", "ctaPath": "/pages/our-story" } },
+      { "key": "instagram_videos", "type": "INSTAGRAM_VIDEOS", "position": 6, "enabled": true, "config": { "eyebrow": "The CORCOTTON community", "heading": "Real People. Real Style.", "description": "See how our community wears CORCOTTON every day.", "autoplaySeconds": 6, "mode": "LATEST", "limit": 8, "picks": [] } },
+      { "key": "trust_strip", "type": "TRUST_STRIP", "position": 7, "enabled": true, "config": { "items": [
+        { "icon": "leaf", "title": "100% Natural Cotton", "sub": "Pure. Safe. Gentle." },
+        { "icon": "shield-check", "title": "Ethically Made", "sub": "For people and planet." },
+        { "icon": "refresh", "title": "Easy Returns", "sub": "Hassle-free & quick" },
+        { "icon": "truck", "title": "Free Shipping", "sub": "On every order" }
+      ] } }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+/* Fixed one-per-site image slots — see SiteImages.jsx. */
+
+.site-images__list { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
+
+.site-image {
+    display: grid;
+    grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+    gap: 18px;
+    padding: 14px;
+    border: 1px solid var(--cms-border, #e5e7eb);
+    border-radius: 10px;
+    background: var(--cms-surface, #fff);
+}
+
+/* The description and the control stop sitting side by side well before the
+   picker gets uncomfortably narrow. */
+@media (max-width: 820px) {
+    .site-image { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+}
+
+.site-image__meta { display: flex; flex-direction: column; gap: 4px; }
+.site-image__label { margin: 0; font-size: 13px; font-weight: 700; }
+.site-image__help { margin: 0; font-size: 12px; color: var(--cms-text-muted, #6b7280); }
+
+.site-image__key {
+    align-self: flex-start;
+    margin-top: 2px;
+    padding: 2px 6px;
+    font-size: 11px;
+    border-radius: 4px;
+    background: var(--cms-surface-muted, #f3f4f6);
+    color: var(--cms-text-muted, #6b7280);
+}
+
+.site-image__control { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+
+.site-images__legacy {
+    margin-top: 18px;
+    padding: 10px 12px;
+    border: 1px dashed var(--cms-border, #d7dae0);
+    border-radius: 10px;
+}
+
+.site-images__legacy-summary { font-size: 13px; font-weight: 600; cursor: pointer; }
+.site-images__legacy-note { margin: 8px 0 0; font-size: 12px; color: var(--cms-text-muted, #6b7280); max-width: 70ch; }

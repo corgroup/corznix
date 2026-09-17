@@ -1,0 +1,44 @@
+/* Shared structured row / matrix editor (Phase 1A — replaces raw JSON editors). */
+.rows-editor { display: flex; flex-direction: column; gap: 10px; }
+
+.rows-editor__table th,
+.rows-editor__table td { white-space: normal; vertical-align: top; }
+
+.rows-editor__input { width: 100%; min-width: 90px; min-height: var(--control-h-sm); padding: 0 var(--control-pad-x-sm); font-size: var(--control-font-sm); }
+
+.rows-editor__actions { display: flex; gap: 8px; align-items: flex-start; white-space: nowrap; }
+.rows-editor__actions-head { width: 1%; }
+.rows-editor__remove { color: var(--error-fg, #b42318); }
+
+.rows-editor__toolbar { display: flex; align-items: center; gap: 10px; }
+.rows-editor__count { font-size: 12px; color: var(--text-muted, #5b6472); }
+
+/* Color-token editor (theme editor). */
+.color-token-field { display: grid; grid-template-columns: 180px 44px 1fr; gap: 10px; align-items: center; }
+.color-token-field__label { font-size: 12px; font-weight: 600; color: var(--text-muted, #5b6472); }
+.color-token-field__swatch {
+  width: 44px; height: 32px; padding: 0;
+  border: 1px solid var(--border-strong, #c8ccd4); border-radius: 6px; cursor: pointer;
+  background: none;
+}
+.color-token-field__swatch:disabled { cursor: not-allowed; opacity: 0.6; }
+
+/* Fill gaps in the shared class set these editors rely on. */
+.pill--warn { background: var(--warn-bg, #fdf0d5); color: var(--warn-fg, #8a5a00); border: 1px solid var(--warn-fg, #8a5a00); }
+.inline-alert--warning,
+.inline-alert--warn { background: var(--warn-bg, #fdf0d5); color: var(--warn-fg, #8a5a00); }
+
+.builder-section {
+  border: 1px solid var(--border, #e3e5ea);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 12px;
+}
+.builder-section > h4 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #5b6472);
+}

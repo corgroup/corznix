@@ -1,0 +1,84 @@
+/* Dashboard page shell: greeting header, KPI grid, panel grid, footer.
+ * Individual widgets style themselves (MetricCard.css, SectionCard.css, …). */
+.dashboard { display: flex; flex-direction: column; gap: var(--space-5); }
+
+.dashboard__toolbar { display: flex; justify-content: flex-end; }
+.dashboard__range { display: inline-flex; align-items: center; gap: 8px; }
+.dashboard__range-label { font-size: 12px; font-weight: 600; color: var(--cms-text-muted); }
+.dashboard__range select { font-weight: 600; }
+
+.dashboard__notice {
+  display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;
+  padding: 12px 14px; border-radius: var(--radius-sm);
+  background: var(--warning-soft); color: var(--warning); font-size: 13px;
+}
+
+.dashboard__kpis {
+  display: grid; gap: var(--space-3);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+@media (max-width: 1200px) { .dashboard__kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 720px)  { .dashboard__kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.dashboard__grid {
+  display: grid; gap: var(--space-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.dashboard__span-2 { grid-column: span 2; }
+@media (max-width: 1100px) {
+  .dashboard__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard__span-2 { grid-column: span 2; }
+}
+@media (max-width: 760px) {
+  .dashboard__grid { grid-template-columns: minmax(0, 1fr); }
+  .dashboard__span-2 { grid-column: span 1; }
+}
+
+.dashboard__foot { margin: 0; font-size: 12px; color: var(--cms-text-faint); }
+.dashboard__foot .linkish { font-size: 12px; }
+
+/* supporting metrics under the sales chart */
+.support-metrics {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3); margin: 18px 0 0;
+}
+.support-metrics__item { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.support-metrics dt { font-size: 11px; color: var(--cms-text-faint); text-transform: uppercase; letter-spacing: 0.04em; }
+.support-metrics dd { margin: 0; font-size: 14px; font-weight: 600; color: var(--cms-text); display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.support-metrics dd .trend { font-size: 11px; }
+@media (max-width: 560px) { .support-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* rank list — top-selling products */
+.rank-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.rank-list li {
+  display: grid; grid-template-columns: 16px 34px 1fr auto; grid-auto-rows: auto;
+  column-gap: 10px; align-items: center; padding: 9px 4px;
+  border-bottom: 1px solid var(--cms-border);
+}
+.rank-list li:last-child { border-bottom: none; }
+.rank-list__pos { color: var(--cms-text-faint); font-weight: 700; font-size: 12px; text-align: center; grid-row: 1 / span 2; }
+.rank-list__thumb {
+  grid-row: 1 / span 2;
+  width: 34px; height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--cms-surface-muted);
+  border: 1px solid var(--cms-border);
+  display: grid; place-items: center;
+  color: var(--cms-text-faint);
+}
+.rank-list__thumb svg { width: 16px; height: 16px; }
+.rank-list__name { grid-column: 3; font-size: 13px; font-weight: 500; color: var(--cms-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rank-list__units { grid-column: 3; font-size: 11px; color: var(--cms-text-faint); }
+.rank-list__value { grid-column: 4; grid-row: 1 / span 2; font-size: 13px; font-weight: 600; color: var(--cms-text); text-align: right; }
+
+/* operational health */
+.health-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.health-list li { display: grid; grid-template-columns: 10px 1fr auto; column-gap: 10px; align-items: center; font-size: 13px; }
+.health-dot { width: 9px; height: 9px; border-radius: 50%; }
+.health-dot--success { background: var(--success); }
+.health-dot--warn { background: var(--warning); }
+.health-dot--danger { background: var(--danger); }
+.health-dot--neutral { background: var(--cms-border-strong); }
+.health-list__label { font-weight: 500; color: var(--cms-text); }
+.health-list__note { color: var(--cms-text-faint); font-size: 12px; text-align: right; }
+.health-list__foot { margin: 12px 0 0; font-size: 12px; }

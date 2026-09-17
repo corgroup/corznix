@@ -1,0 +1,11 @@
+{
+  "name": "@cor-group/shared-types",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shared JSDoc type definitions and runtime constants for the CORE GROUP platform",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

@@ -1,0 +1,19 @@
+.sortable { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.sortable__row { position: relative; min-width: 0; border-radius: var(--radius); }
+.sortable__row--dragging { opacity: 0.45; }
+.sortable__row--drop-before::before,
+.sortable__row--drop-after::after {
+  content: ''; position: absolute; left: 0; right: 0; height: 2px; border-radius: 2px; background: var(--accent);
+}
+.sortable__row--drop-before::before { top: -4px; }
+.sortable__row--drop-after::after { bottom: -4px; }
+
+.drag-handle {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 22px; height: 28px; border-radius: 6px; color: var(--text-faint); cursor: grab; touch-action: none;
+}
+.drag-handle:hover { color: var(--text-muted); background: var(--surface-2); }
+.drag-handle:active { cursor: grabbing; }
+.drag-handle:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; color: var(--accent); }
+.drag-handle--disabled { cursor: default; opacity: 0.4; }
+.drag-handle--disabled:hover { background: transparent; }

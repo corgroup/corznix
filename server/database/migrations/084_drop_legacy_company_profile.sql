@@ -1,0 +1,11 @@
+-- Multi-company CMS — Phase 7 (DESIGN.md §8, Phase 7 row: "drop
+-- `company_profile` singular"). No application code has read or written
+-- this table since Phase 5 rewired company/repository.js to the plural,
+-- brand_id-keyed `company_profiles` (confirmed by grep across server/src:
+-- zero real reads/writes remain, only historical comments). The 4 verify
+-- scripts that still touched it directly were updated to use
+-- `company_profiles` in this same phase.
+--
+-- Forward-only, non-destructive to any live data: `company_profiles`
+-- already carries Cor-Cotton's full legal identity (Phase 1 backfill).
+DROP TABLE IF EXISTS company_profile;

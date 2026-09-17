@@ -1,0 +1,11 @@
+{
+  "name": "@cor-group/api-client",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shared HTTP client for CORE GROUP frontend applications",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

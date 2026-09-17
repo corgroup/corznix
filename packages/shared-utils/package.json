@@ -1,0 +1,11 @@
+{
+  "name": "@cor-group/shared-utils",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shared brand-agnostic utility functions for the CORE GROUP platform",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "//": "nodemon's default extension list is js,mjs,cjs,json, so editing .env did NOT restart the dev server. That cost real time during the WhatsApp OTP investigation: the key in .env had been replaced, the running process still held the old one in memory, and the symptom was identical to the key still being wrong. Watching .env makes a credential change take effect the way everyone already assumes it does.",
+  "watch": ["src", ".env"],
+  "ext": "js,mjs,cjs,json,env",
+  "ignore": ["src/**/*.test.js"]
+}
