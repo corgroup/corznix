@@ -1,8 +1,11 @@
 {
-  "name": "@cor-group/corznix",
+  "name": "corznix",
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
